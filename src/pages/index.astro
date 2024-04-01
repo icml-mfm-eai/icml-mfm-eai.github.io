@@ -1,0 +1,481 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Home',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header {...headerData} isSticky />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="CVPR 2023 Workshop"
+    actions={[
+      { variant: 'primary', text: 'Get Started', href: '#features' },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="">End-to-End Autonomous Driving:</span><br /> Emerging Tasks and Challenges
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-semibold">corporis</span>consequuntur
+        nihil vitae voluptate</span
+      >
+      Quas natus laborum neque nemo quasi aliquam similique sint, veritatis expedita optio ex , voluptatem consequatur soluta
+      enim!
+    </Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="Overview"
+    items={[
+      {
+        title: 'Welcome to the CVPR 2023 Workshop on End-to-End Autonomous Driving!',
+        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
+        Overview<br />
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content>
+    <Fragment slot="content">
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
+        Schedule<br /><span class="text-2xl">Converting visitors into customers</span>
+      </h3>
+      <div class="schedule-tbl">
+        <table>
+          <thead>
+            <tr>
+              <th class="schedule-time w-52">Time</th>
+              <th class="schedule-logo w-20"> </th>
+              <th class="schedule-slot">Speaker</th>
+              <th class="schedule-description">Theme</th>
+              <th class="schedule-meta w-20">Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="schedule-time"><span>9</span>:00,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Ziwei Liu</b>
+                <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description"><b>Welcome and Opening Remarks</b></td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=yDcxTYo-fT8&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=1"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>9</span>:10,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Deva Ramanan</b>
+                <span class="speakers-company"><br />Carnegie Mellon University, USA</span>
+              </td>
+              <td class="schedule-description"
+                ><b
+                  >MultiModal Perception of the 4D World for Autonomous Navigation: Flexible Maps, Fusion, and
+                  Forecasting</b
+                ></td
+              >
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=L47eql6YgB0&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=2"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>9</span>:45,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Phil Duan</b><span class="speakers-company"><br />Tesla, USA</span>
+              </td>
+              <td class="schedule-description"><b>Building Vision Foundation Models for Autonomous Driving</b></td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=OKDRsVXv49A&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=3"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>10</span>:20,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <!-- <div> <img class="schedule_logo_img" src="/ui2023/img/team_logo.png"></div> -->
+              </td>
+              <td class="schedule-slot">
+                <b
+                  >Invited Talk<br />
+                  3D Occupancy Prediction
+                </b><span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">
+                <li style="list-style-type:disc;">Chonghao Sima: Scene as Occupancy (25 min)</li>
+                <li style="list-style-type:disc;">
+                  Zhiding Yu: 3D Occupancy Prediction based on Forward-Backward View Transformation (20 min)
+                </li>
+              </td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=kmKRiRYcoRg&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=4"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>11</span>:05,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                Coffee Break <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description"> -</td>
+              <td class="schedule-description">-</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>11</span>:15,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <div></div>
+              </td>
+              <td class="schedule-slot">
+                <b>Patrick Langechuan Liu</b>
+                <span class="speakers-company"><br />XPENG, China</span>
+              </td>
+              <td class="schedule-description"><b>The Practice of Mass Production Autonomous Driving</b></td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=d6ucRgDDUWQ&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=5"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>11</span>:50,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Host: Tutian Tang</b><span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">
+                <b>OpenLane Topology Challenge</b>
+                <li style="list-style-type:disc;">Introduction (10 min)</li>
+                <li style="list-style-type:disc;">Innovation Award: PlatypusWhisperers (5 min)</li>
+                <li style="list-style-type:disc;">Honorable Runner-up: Victory (5 min)</li>
+                <li style="list-style-type:disc;">Outstanding Champion: MFV (5 min)</li>
+              </td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=HKxQmmZvHzc&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=6"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>12</span>:20,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                Lunch Break <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">-</td>
+              <td class="schedule-description">-</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>13</span>:30,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Jose M. Alvarez</b>
+                <span class="speakers-company"><br />NVIDIA, USA</span>
+              </td>
+              <td class="schedule-description"
+                ><b>Camera-based Perception for AV: From Data Collections to Network Robustness</b></td
+              >
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=wMHfN1mzwME&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=7"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span>14</span>:05,<br class="m" /> Jun <a>18</a></td>
+              <td class="schedule-logo">
+                <b> </b>
+              </td>
+              <td class="schedule-slot">
+                <b>Sergey Levine</b>
+                <span class="speakers-company"><br />UC Berkeley, USA</span>
+              </td>
+              <td class="schedule-description"><b>Learning Navigation from Offline Data and Online Finetuning</b></td>
+              <td class="schedule-description"
+                ><a href="https://www.youtube.com/watch?v=exepHuv8XO0&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=8"
+                  ><img
+                    src="https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    style="height: 20px; user-select: none; margin-left: 20%;"
+                  />
+                </a></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Speakers"
+    icons={[]}
+    images={[
+      {
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },
+    ]}
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></Brands
+  >
+  <!-- Content Widget **************** -->
+
+  <Content>
+    <Fragment slot="content">
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
+        Challenges<br /><span class="text-2xl">Converting visitors into customers</span>
+      </h3>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dolore atque facilis aliquam corrupti adipisci quam,
+      ex laboriosam perferendis quis, iste soluta minus obcaecati nesciunt fugit debitis, laborum est sapiente.
+    </Fragment>
+  </Content>
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Organizers"
+    icons={[]}
+    images={[
+    {
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },
+    ]}
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></Brands
+  >
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Steering Committee"
+    icons={[]}
+    images={[
+     {
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },{
+        src: '/avatar.png',
+        alt: 'avatar',
+        name:'Li Chen',
+        university:'UIUC'
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        description:
+          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Can I use AstroWind for both personal and commercial projects?',
+        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'What level of coding knowledge is required to use AstroWind?',
+        description:
+          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is customer support available for AstroWind users seeking guidance?',
+        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+</Layout>
