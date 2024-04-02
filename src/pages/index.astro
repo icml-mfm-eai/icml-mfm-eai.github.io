@@ -8,7 +8,7 @@ import Content from '~/components/widgets/Content.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
-import Button from '~/components/ui/Button.astro';
+import Timezone from '~/components/widgets/Timezone.astro';
 
 const metadata = {
   title: 'Home',
@@ -17,7 +17,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header {...headerData} isSticky showToggleTheme />
+    <Header {...headerData} isSticky />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -28,10 +28,6 @@ const metadata = {
       { variant: 'primary', text: 'Get Started', href: '#features' },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
   >
     <Fragment slot="title">
       <span class="">End-to-End Autonomous Driving:</span><br /> Emerging Tasks and Challenges
@@ -76,106 +72,39 @@ const metadata = {
       <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
         Schedule<br />
       </h3>
-      <div class="container mx-auto px-4 py-8">
-        <div class="flex flex-col">
-          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <table class="min-w-full divide-y divide-gray-200">
-                  <thead class="bg-gray-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Time
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Speaker
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Theme
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Content
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y divide-gray-200">
-                    <!-- Rows will go here -->
-                    <tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Welcome and Opening Remarks </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <Button variant="link" href={'/'}>Link</Button>
-                      </td>
-                    </tr>
-                    <!-- Repeat for more rows as needed -->
-                    <tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Welcome and Opening Remarks </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <Button variant="link" href={'/'}>Link</Button>
-                      </td>
-                    </tr><tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Welcome and Opening Remarks </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <Button variant="link" href={'/'}>Link</Button>
-                      </td>
-                    </tr><tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Welcome and Opening Remarks </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <Button variant="link" href={'/'}>Link</Button>
-                      </td>
-                    </tr><tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        MultiModal Perception of the 4D World for Autonomous Navigation: Flexible Maps, Fusion, and
-                        Forecasting
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <Button variant="link" href={'/'}>Link</Button>
-                      </td>
-                    </tr><tr>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> 9:00, Jun 18 </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"> Ziwei Liu </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <div class="font-bold">OpenLane Topology Challenge</div>
-                        <ul class="list-disc pl-5">
-                          <!-- 小标题 -->
-                          <li>Introduction (10 min)</li>
-                          <li>Innovation Award: PlatypusWhisperers (5 min)</li>
-                          <li>Honorable Runner-up: Victory (5 min)</li>
-                          <li>Outstanding Champion: MFV (5 min)</li>
-                        </ul>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <Button variant="link" href={'/'}>Link</Button>
-                        </td>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Timezone
+        items={[
+          {
+            time: '2023-11-12T17:00:00',
+            theme: {
+              title: 'OpenLane Topology Challenge',
+              subtitles: [
+                'Introduction (10 min)',
+                'Innovation Award: PlatypusWhisperers (5 min)',
+                'Honorable Runner-up: Victory (5 min)',
+              ],
+            },
+            Speaker: 'Ziwei Liu',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: 'https://www.youtube.com/watch?v=yDcxTYo-fT8&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=1',
+          },{
+            time: '2023-10-12T22:00:00',
+            theme: {
+              title: 'OpenLane Topology Challenge',
+              subtitles: [
+                'Introduction (10 min)',
+                'Innovation Award: PlatypusWhisperers (5 min)',
+                'Honorable Runner-up: Victory (5 min)',
+              ],
+            },
+            Speaker: 'Ziwei Liu',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: 'https://www.youtube.com/watch?v=yDcxTYo-fT8&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=1',
+          },
+        ]}
+      />
     </Fragment>
   </Content>
 
