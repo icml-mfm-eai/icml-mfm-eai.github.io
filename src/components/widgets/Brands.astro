@@ -26,11 +26,15 @@ const {
         images.map(
           (image) =>
             image.src && (
-              <div class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200 flex-col items-center">
+              <a
+                target="_blank"
+                class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200 flex-col items-center"
+                href={image.bioLink}
+              >
                 <img src={image.src} alt={image.alt || ''} class="max-h-24 rounded-full" />
                 <div class="text-xl mt-2">{image.name}</div>
                 <div class="text-base text-slate-400">{image.university}</div>
-              </div>
+              </a>
             )
         )
     }

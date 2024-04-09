@@ -88,6 +88,7 @@ export interface Image {
   alt?: string;
   name?: string;
   university?: string;
+  bioLink?:string
 }
 
 export interface Video {

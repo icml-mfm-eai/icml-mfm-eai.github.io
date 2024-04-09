@@ -1,6 +1,4 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -9,6 +7,7 @@ import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Timezone from '~/components/widgets/Timezone.astro';
+import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Home',
@@ -23,50 +22,73 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="ICML-TiFA 2023 Workshop"
+    tagline="ICML 2024 Workshop"
     actions={[
       { variant: 'primary', text: 'Get Started', href: '#features' },
       { text: 'Learn more', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      <span class="">End-to-End Autonomous Driving:</span><br /> Emerging Tasks and
-      Challenges
+      <span class=""> Trustworthy in Multi-modal </span><br />
+      Foundation Models and AI Agents
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <span
-          class="font-semibold">corporis</span
-        >consequuntur nihil vitae voluptate</span
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-semibold">corporis</span>consequuntur
+        nihil vitae voluptate</span
       >
-      Quas natus laborum neque nemo quasi aliquam similique sint, veritatis expedita
-      optio ex , voluptatem consequatur soluta enim!
+      Quas natus laborum neque nemo quasi aliquam similique sint, veritatis expedita optio ex , voluptatem consequatur soluta
+      enim!
     </Fragment>
   </Hero2>
 
   <!-- Content Widget **************** -->
 
-  <Content
-    id="Overview"
-    items={[
-      {
-        title:
-          'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
-        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3
-        class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2"
-      >
-        Overview<br />
-      </h3>
+  <Content id="Overview">
+    <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
+      >Welcome to the ICML 2024 Workshop on Trustworthy in Multi-modal Foundation Models and AI Agents (TiFA)
     </Fragment>
-
+    <Fragment slot="content"
+      ><div class="mb-4">
+        Multi-modal Foundation Models (MFMs) have witnessed significant advancements in various bench marks and
+        practical applications. They are proficient in a wide range of tasks, and capable of pro ducing varied
+        multimodal responses. Nowadays a couple of MFMs have been deployed as realistic applications (such as GPT-4 [18]
+        and Midjourney [25]). Meanwhile, a large variety of MFMs (like InternLM [24] and LLaVA [14]) are still under
+        further research. Furthermore, foundation models with their powerful reasoning capabilities have led to the
+        emergence of various AI Agents [19, 28]. These agents are often capable of understanding open-world
+        instructions, breaking down complex tasks, and taking steps to achieve their goals.
+      </div>
+      <div class="mb-4">
+        Advanced MFMs and AI Agents, equipped with diverse modalities and an increasing number of available affordances,
+        accelerate their potential impact on society. As these systems gain abili ties to alter societal dynamics
+        swiftly, understanding and preempting the vulnerabilities of such systems and their induced harms becomes
+        crucial. Trustworthiness in MLMs and AI Agents tran scends identifying vulnerabilities in models and emphasizes
+        the importance of proactive harm mit igation, safeguards, and the establishment of comprehensive safety
+        mechanisms throughout the lifecycle of system development and deployment. This approach demands a blend of
+        technical and socio-technical strategies, incorporating AI governance and regulatory insights to build
+        trustworthy MFMs and Agents.
+      </div>
+      <div class="mb-4">
+        Our goals are threefold: 1) Highlight novel directions in trustworthy MFM and AI Agent research; 2) Promote
+        interdisciplinary collaboration on trustworthy MFM and AI Agents, for example among i) trustworthy ML research
+        in vision, language, and other modalities; ii) technical and governance communities; 3) Initiate discussions on
+        best practices for responsible training, deployment, trans parency, and security of MFM and AI Agents.
+      </div>
+    </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content id="Call-For-Papers">
+    <Fragment slot="title"> Call For Papers </Fragment>
+    <Fragment slot="content"
+      >Competition To encourage community participation, we will allow wider community members to submit their questions
+      to the panel via a Google form made available on the website beforehand as well as to ask live questions. We will
+      further facilitate breakout rooms after the panel discussion to encourage discussions among the attendees.
+      Programs In particular, each challenge has 2 phases. During phase 1, we will adopt white-box evaluation, while
+      during phase 2, we will adopt black-box evaluation. The tentative timetable is shown as following table
     </Fragment>
   </Content>
 
@@ -74,45 +96,67 @@ const metadata = {
 
   <Content id="Schedule">
     <Fragment slot="content">
-      <h3
-        class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center"
-      >
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
         Schedule<br />
       </h3>
       <Timezone
         items={[
           {
-            time: '2023-11-12T17:00:00',
+            time: '2024-05-15T08:50:00',
             theme: {
-              title: 'OpenLane Topology Challenge',
-              subtitles: [
-                'Introduction (10 min)',
-                'Innovation Award: PlatypusWhisperers (5 min)',
-                'Honorable Runner-up: Victory (5 min)',
-              ],
-            },
-            Speaker: 'Ziwei Liu',
-            institution: 'XPENG, China',
-            logoSrc: '/workshop-astro-demo/avatar.png',
-            link: 'https://www.youtube.com/watch?v=yDcxTYo-fT8&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=1',
-          },
-          {
-            time: '2023-10-12T22:00:00',
-            theme: {
-              title: 'OpenLane Topology Challenge',
-              subtitles: [
-                'Introduction (10 min)',
-                'Innovation Award: PlatypusWhisperers (5 min)',
-                'Honorable Runner-up: Victory (5 min)',
-              ],
+              title: 'Opening Remarks (10 min)',
+              subtitles: ['LoremLoremLoremLorem', 'LoremLoremLoremLorem'],
             },
             Speaker: 'Ziwei Liu',
             institution: 'XPENG, China',
             logoSrc: '/avatar.png',
-            link: 'https://www.youtube.com/watch?v=yDcxTYo-fT8&list=PL3N9otbGBVLc3jdm6yrPtCWdE7C8AsNAy&index=1',
+            link: '#',
+          },
+          {
+            time: '2024-05-15T09:00:00',
+            theme: {
+              title: 'Invited talk 1: Roger Grosse (30 min)',
+            },
+            Speaker: 'Roger Grosse',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: '',
+          },
+          {
+            time: '2024-05-15T09:30:00',
+            theme: {
+              title: 'Invited talk 2: Matthias Hein (30 min)',
+            },
+            Speaker: 'Matthias Hein',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: '',
+          },
+          {
+            time: '2024-05-15T10:00:00',
+            theme: {
+              title: 'Contributed Opinion Talk 1 (30 min)',
+            },
+            Speaker: 'Matthias Hein',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: '',
+          },
+          {
+            time: '2024-05-15T10:30:00',
+            theme: {
+              title: 'Break (15 min)',
+            },
+            Speaker: 'Matthias Hein',
+            institution: 'XPENG, China',
+            logoSrc: '/avatar.png',
+            link: '',
           },
         ]}
       />
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -121,55 +165,51 @@ const metadata = {
   <Brands
     id="Speakers"
     title="Speakers"
-    icons={[]}
     images={[
       {
-        src: '/workshop-astro-demo/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker01.png',
+        alt: 'speaker01',
+        name: 'Roger Grosse',
+        university: 'University of Toronto',
+        bioLink: 'https://www.cs.toronto.edu/~rgrosse/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker02.png',
+        alt: 'speaker02',
+        name: 'Been Kim',
+        university: 'Google DeepMind',
+        bioLink: 'https://beenkim.github.io/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker03.png',
+        alt: 'speaker03',
+        name: 'Florian Tramèr',
+        university: 'ETH Zürich',
+        bioLink: 'https://www.floriantramer.com/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker04.png',
+        alt: 'speaker04',
+        name: 'Ludwig Schmidt',
+        university: 'University of Washington',
+        bioLink: 'https://people.csail.mit.edu/ludwigs/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker05.png',
+        alt: 'speaker05',
+        name: 'Matthias Hein',
+        university: 'University of Tübingen',
+        bioLink: 'http://bit.ly/3UAht4W',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
-      },
-      {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/speaker06.png',
+        alt: 'speaker06',
+        name: 'Ivan Evtimov',
+        university: 'Meta',
+        bioLink: 'https://ivanevtimov.eu/',
       },
     ]}
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment></Brands
-  >
+  />
   <!-- Content Widget **************** -->
 
   <Content
@@ -177,38 +217,31 @@ const metadata = {
     columns={4}
     items={[
       {
-        title:
-          'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
+        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
         description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
       },
       {
-        title:
-          'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
+        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
         description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
       },
       {
-        title:
-          'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
+        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
         description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
       },
       {
-        title:
-          'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
+        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
         description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
       },
     ]}
   >
     <Fragment slot="content">
-      <h3
-        class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2"
-      >
-        Challenges<br /><span class="text-2xl"
-          >Converting visitors into customers</span
-        >
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
+        Challenges<br /><span class="text-2xl">Converting visitors into customers</span>
       </h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dolore atque
-      facilis aliquam corrupti adipisci quam, ex laboriosam perferendis quis, iste
-      soluta minus obcaecati nesciunt fugit debitis, laborum est sapiente.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dolore atque facilis aliquam corrupti adipisci quam,
+      ex laboriosam perferendis quis, iste soluta minus obcaecati nesciunt fugit debitis, laborum est sapiente.
+    </Fragment><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
   <!-- Brands Widget ****************** -->
@@ -219,52 +252,70 @@ const metadata = {
     icons={[]}
     images={[
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer01.png',
+        alt: 'organizer01',
+        name: 'Zhenfei Yin',
+        university: 'University of Sydney',
+        bioLink: 'https://scholar.google.com.hk/citations?user=ngPR1dIAAAAJ&hl=zh-CN',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer02.png',
+        alt: 'organizer02',
+        name: 'Yawen Duan',
+        university: 'University of Cambridge',
+        bioLink: 'https://scholar.google.com/citations?user=IJQlPvYAAAAJ&hl=en',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer03.png',
+        alt: 'organizer03',
+        name: 'Jianfeng Chi',
+        university: 'Meta AI',
+        bioLink: 'https://jfchi.github.io/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer04.png',
+        alt: 'organizer04',
+        name: 'Hang Su',
+        university: 'Tsinghua University',
+        bioLink: 'https://www.suhangss.me/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer06.png',
+        alt: 'organizer06',
+        name: 'Jing Shao',
+        university: 'Shanghai AI Laboratory',
+        bioLink: 'https://amandajshao.github.io/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer07.png',
+        alt: 'organizer07',
+        name: 'Pavel Izmailov',
+        university: 'OpenAI',
+        bioLink: 'https://izmailovpavel.github.io/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer08.png',
+        alt: 'organizer08',
+        name: 'Zhengyi Wang',
+        university: 'Tsinghua University',
+        bioLink: 'https://thuwzy.github.io/',
+      },
+      {
+        src: '/organizer09.png',
+        alt: 'organizer09',
+        name: 'Andy Zou',
+        university: 'Carnegie Mellon University',
+        bioLink: 'https://andyzoujm.github.io/',
+      },
+      {
+        src: '/organizer05.png',
+        alt: 'organizer05',
+        name: 'Cihang Xie',
+        university: 'University of California, Santa Cruz',
+        bioLink: 'https://cihangxie.github.io/',
       },
     ]}
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment></Brands
-  >
+  />
 
   <!-- Brands Widget ****************** -->
 
@@ -274,49 +325,103 @@ const metadata = {
     icons={[]}
     images={[
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee01.png',
+        alt: 'committee01',
+        name: 'Peyman Najafirad',
+        university: 'University of Texas, San Antonio',
+        bioLink: 'https://scholar.google.com/citations?user=uoCn8c8AAAAJ&hl=en',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee02.png',
+        alt: 'committee02',
+        name: 'Neil Zhenqiang Gong',
+        university: 'Duke University',
+        bioLink: 'https://people.duke.edu/~zg70/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/organizer05.png',
+        alt: 'organizer05',
+        name: 'Cihang Xie',
+        university: 'University of California, Santa Cruz',
+        bioLink: 'https://cihangxie.github.io/',
+      },
+
+      {
+        src: '/committee04.png',
+        alt: 'committee04',
+        name: 'Yu Qiao',
+        university: 'Shanghai AI Lab',
+        bioLink: 'https://mmlab.siat.ac.cn/yuqiao',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee06.png',
+        alt: 'committee06',
+        name: 'Wanli Ouyang',
+        university: 'Shanghai AI Lab',
+        bioLink: 'https://wlouyang.github.io/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee05.png',
+        alt: 'committee05',
+        name: 'Alan Yuille',
+        university: 'Johns Hopkins University',
+        bioLink: 'https://www.cs.jhu.edu/~ayuille/',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee07.png',
+        alt: 'committee07',
+        name: 'Jun Zhu',
+        university: 'Tsinghua University',
+        bioLink: 'https://ml.cs.tsinghua.edu.cn/~jun/index.shtml',
       },
       {
-        src: '/avatar.png',
-        alt: 'avatar',
-        name: 'Li Chen',
-        university: 'UIUC',
+        src: '/committee08.png',
+        alt: 'committee08',
+        name: 'Dacheng Tao',
+        university: 'University of Sydney',
+        bioLink: 'https://ieeexplore.ieee.org/author/37269935500',
+      },
+      {
+        src: '/committee09.png',
+        alt: 'committee09',
+        name: 'Philip Torr',
+        university: 'University of Oxford',
+        bioLink: 'https://www.robots.ox.ac.uk/~phst/',
+      },
+      {
+        src: '/committee10.png',
+        alt: 'committee10',
+        name: 'Xuanjing Huang',
+        university: 'Fudan University',
+        bioLink: 'https://xuanjing-huang.github.io/',
+      },
+      {
+        src: '/committee03.png',
+        alt: 'committee03',
+        name: 'Bo Li',
+        university: 'University of Illinois, Urbana Champaign',
+        bioLink: 'https://aisecure.github.io/',
       },
     ]}
-  />
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></Brands
+  >
+  <Content id="References">
+    <Fragment slot="title"> References </Fragment>
+    <Fragment slot="content">
+      <p>
+        [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
+        models at runtime, 2023.
+      </p>
+      <p>
+        [2] M. Bhatt, S. Chennabasappa, C. Nikolaidis, S. Wan, I. Evtimov, D. Gabi, D. Song, F. Ahmad, C. Aschermann, L.
+        Fontana, S. Frolov, R. P. Giri, D. Kapil, Y. Kozyrakis, D. LeBlanc, J. Mi lazzo, A. Straumann, G. Synnaeve, V.
+        Vontimitta, S. Whitman, and J. Saxe. Purple llama cyberseceval: A secure coding benchmark for language models,
+        2023.
+      </p>
+    </Fragment>
+  </Content>
 
   <!-- FAQs Widget ******************* -->
 
@@ -324,26 +429,22 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
         description: 'aliquam officiis nulla consectetur',
         icon: 'tabler:help-octagon',
       },
       {
-        title:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
         description: 'aliquam officiis nulla consectetur',
         icon: 'tabler:help-octagon',
       },
       {
-        title:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
         description: 'aliquam officiis nulla consectetur',
         icon: 'tabler:help-octagon',
       },
       {
-        title:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
         description: 'aliquam officiis nulla consectetur',
         icon: 'tabler:help-octagon',
       },

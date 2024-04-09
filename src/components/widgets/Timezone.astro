@@ -5,11 +5,11 @@ import Image from '~/components/common/Image.astro';
 const { items } = Astro.props;
 ---
 
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto px-4 py-2">
   <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-        <div class="flex items-center gap-2 mx-2 my-1">
+        <div class="flex items-center gap-2 mx-2 my-4">
           <label for="timezone" class="font-medium text-sm">Please select your time zone:</label>
           <select id="timezone" class="border border-gray-300 rounded-md px-3 py-2 text-sm">
             <option value="Pacific/Midway">Midway Islands (UTC-11)</option>
@@ -89,16 +89,14 @@ const { items } = Astro.props;
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <div class="flex gap-2">
-                        <Image src={'/banner.jpg'} alt={'post.title'} width={24} height={24} />
+                        <Image src={item.logoSrc} alt={'post.title'} width={24} height={24} />
                         {item.Speaker}
                       </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <div class="font-bold">{item.theme.title}</div>
                       <ul class="list-disc pl-5">
-                        {item.theme.subtitles.map((subtitle) => (
-                          <li>{subtitle}</li>
-                        ))}
+                        {item.theme.subtitles && item.theme.subtitles.map((subtitle) => <li>{subtitle}</li>)}
                       </ul>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         <Button variant="link" href={item.link}>

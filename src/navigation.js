@@ -7,6 +7,10 @@ export const headerData = {
       href: getPermalink('/#Overview'),
     },
     {
+      text: 'Call For Papers',
+      href: getPermalink('/#Call-For-Papers'),
+    },
+    {
       text: 'Schedule',
       href: getPermalink('/#Schedule'),
     },
