@@ -1,7 +1,7 @@
 site:
-  name: CVPR workshop
-  site: 'https://floatgray.github.io'
-  base: '/workshop-astro-demo'
+  name: ICML-TiFA workshop
+  site: 'https://icml-tifa.github.io'
+  base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: CVPR WorkShop
-    template: '%s — CVPR WorkShop'
+    default: ICML-TiFA WorkShop
+    template: '%s — ICML-TiFA WorkShop'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: CVPR WorkShop
+    site_name: ICML-TiFA WorkShop
     images:
       - url: '~/assets/images/default.png'
         width: 1200
