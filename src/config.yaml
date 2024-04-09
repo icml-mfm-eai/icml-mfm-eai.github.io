@@ -1,6 +1,6 @@
 site:
-  name: ICML-TiFA workshop
-  site: 'https://icml-tifa.github.io'
+  name: ICML-MFM-EAI WorkShop
+  site: 'https://icml-mfm-eai.github.io'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: ICML-TiFA WorkShop
-    template: '%s — ICML-TiFA WorkShop'
+    default: ICML-MFM-EAI WorkShop
+    template: '%s — ICML-MFM-EAI WorkShop'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: ICML-TiFA WorkShop
+    site_name: ICML-MFM-EAI WorkShop
     images:
       - url: '~/assets/images/default.png'
         width: 1200
