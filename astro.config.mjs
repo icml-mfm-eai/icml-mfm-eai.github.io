@@ -21,9 +21,9 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
   site: 'https://floatgray.github.io',
   base: '/blackgyalbites-astro',
+  output: 'static',
 
   integrations: [
     tailwind({
