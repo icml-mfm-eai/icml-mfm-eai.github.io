@@ -23,10 +23,7 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
   site: 'https://floatgray.github.io',
-  base: '/workshop-astro-demo',
-  build: {
-    assets: '/workshop-astro-demo/_astro',
-  },
+  base: '/workshop-astro-demo/',
 
   integrations: [
     tailwind({
