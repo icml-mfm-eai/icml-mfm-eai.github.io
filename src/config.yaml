@@ -1,7 +1,7 @@
 site:
-  name: CVPR WorkShop
-  site: 'https://astrowind.vercel.app'
-  base: '/workshop-astro-demo',
+  name: CVPR workshop
+  site: 'https://floatgray.github.io'
+  base: '/workshop-astro-demo'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
