@@ -18,17 +18,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
 const whenExternalScripts = (items = []) =>
-  hasExternalScripts
-    ? Array.isArray(items)
-      ? items.map((item) => item())
-      : [items()]
-    : [];
+  hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
   output: 'static',
   site: 'https://floatgray.github.io',
-  base: '/workshop-astro-demo/',
-  
+  base: '/workshop-astro-demo',
+  build: {
+    assets: '/workshop-astro-demo/_astro',
+  },
 
   integrations: [
     tailwind({
