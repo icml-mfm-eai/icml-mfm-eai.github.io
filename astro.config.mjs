@@ -21,8 +21,6 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: 'https://floatgray.github.io',
-  base: 'workshop-astro-demo',
   output: 'static',
 
   integrations: [
