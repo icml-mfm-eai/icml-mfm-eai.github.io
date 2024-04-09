@@ -1,5 +1,5 @@
 site:
-  name: ICML-TiFA workshop
+  name: ICML-TiFA
   site: 'https://icml-tifa.github.io'
   base: '/'
   trailingSlash: false
