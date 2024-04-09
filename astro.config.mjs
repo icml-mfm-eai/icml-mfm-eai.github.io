@@ -22,7 +22,7 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   site: 'https://floatgray.github.io',
-  base: '/blackgyalbites-astro',
+  base: 'workshop-astro-demo',
   output: 'static',
 
   integrations: [
