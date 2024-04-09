@@ -23,6 +23,7 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
   site: 'https://floatgray.github.io',
+  base: '/blackgyalbites-astro',
 
   integrations: [
     tailwind({
