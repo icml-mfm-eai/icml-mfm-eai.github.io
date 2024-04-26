@@ -11,14 +11,6 @@ export const headerData = {
       href: getPermalink('/#Call-For-Papers'),
     },
     {
-      text: 'Schedule',
-      href: getPermalink('/#Schedule'),
-    },
-    {
-      text: 'Speakers',
-      href: getPermalink('/#Speakers'),
-    },
-    {
       text: 'Challenges',
       href: getPermalink('/#Challenges'),
     },

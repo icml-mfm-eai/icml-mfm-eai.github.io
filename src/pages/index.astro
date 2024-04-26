@@ -4,9 +4,9 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import { headerData } from '~/navigation';
-import FAQs from '~/components/widgets/FAQs.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
-import Timezone from '~/components/widgets/Timezone.astro';
+// import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -94,7 +94,7 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <Content id="Schedule">
+  <!-- <Content id="Schedule">
     <Fragment slot="content">
       <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
         Schedule<br />
@@ -268,10 +268,10 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Brands Widget ****************** -->
-
+  <!-- 
   <Brands
     id="Speakers"
     title="Speakers"
@@ -347,7 +347,7 @@ const metadata = {
         bioLink: 'https://yilundu.github.io/',
       },
     ]}
-  />
+  /> -->
   <!-- Content Widget **************** -->
 
   <Content id="Challenges"
@@ -553,7 +553,7 @@ const metadata = {
   </Content>
 
   <!-- FAQs Widget ******************* -->
-
+  <!-- 
   <FAQs
     title="Frequently Asked Questions"
     items={[
@@ -582,5 +582,5 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </FAQs>
+  </FAQs> -->
 </Layout>
