@@ -21,13 +21,7 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2
-    tagline="ICML 2024 Workshop"
-    actions={[
-      { variant: 'primary', text: 'Get Started', href: '#features' },
-      { text: 'Learn more', href: '#features' },
-    ]}
-  >
+  <Hero2 tagline="ICML 2024 Workshop" actions={[{ variant: 'primary', text: 'Get Started', href: '#Overview' }]}>
     <Fragment slot="title"> Multi-modal Foundation Model meets Embodied AI </Fragment>
 
     <Fragment slot="subtitle">
@@ -45,32 +39,49 @@ const metadata = {
     </Fragment>
     <Fragment slot="content"
       ><div class="mb-4">
-        In recent years, Multi-modal Foundation Models (MFM) such as CLIP (17), ImageBind (11), DALL·E 3 (4), GPT 4V
-        (15), and Gemini (19) have emerged as one of the most captivating and rapidly advancing areas in AI, drawing
-        significant attention and progressing swiftly. The open-source community for MFM has also seen vigorous growth,
-        with the emergence of models and algorithms like LLaVA (14), LAMM(22), Stable Diffusion (18), and OpenFlamingo
-        (2). These MFMs are now actively exploring ultimate application scenarios beyond traditional computer vision
-        tasks.
+        In recent years, Multi-modal Foundation Models (MFM) such as CLIP (20), ImageBind (13), DALL·E 3 (3), GPT- 4V
+        (18), Gemini (22), and Sora (5), have emerged as one of the most captivating and rapidly advancing areas in AI,
+        drawing significant attention and progressing swiftly. The open-source community for MFM has also seen vigorous
+        growth, with the emergence of models and algorithms like LLaVA (17), LAMM (26), MiniGPT-4 (28), Stable Diffusion
+        (21), and OpenSora (14). These MFMs are now actively exploring ultimate application scenarios beyond traditional
+        computer vision and natural language processing tasks. Simultaneously bolstered by MFM, Embodied Artificial
+        Intelligence (EAI) agents have achieved considerable progress in addressing complex tasks in both simulators and
+        real-world environments. However, at the intersection of these fields, a multitude of open questions and
+        unexplored territories remain, including long-horizon decision-making, motion planning with specific
+        trajectories, adapting to new environments, and more. This workshop is dedicated to exploring several critical
+        challenges, including but not limited to:
       </div>
       <div class="mb-4">
-        Recent studies have unveiled the immense potential these models hold in empowering embodied AI agents, marking
-        the intersection of these fields with a multitude of open questions and unexplored territories (7; 5; 6; 12).
-        This workshop, MFM-EAI, is dedicated to exploring these critical challenges:
-
-        <li class="ml-4">How can we train and evaluate MFM in open-ended environments?</li>
-        <li class="ml-4">What constitutes an effective system architecture for MFM-based Embodied AI Agents?</li>
-        <li class="ml-4">
-          And importantly, how can MFM augment the perceptual and decision-making capabilities of these agents,
-          balancing their high-level decision-making prowess with the nuanced requirements of low-level control in
-          embodied systems?
-        </li>
-      </div>
-      <div class="mb-4">
-        This workshop aims to accelerate research and collaboration in computer vision and robotics. The event will
-        advance multi-modal foundation models, enhancing the development of embodied AI systems capable of handling
-        complex scenarios. Furthermore, it will focus on open-ended embodied agents, with potential applications in
-        domestic service, healthcare, manufacturing, gaming, etc. Besides, the workshop will contribute to education and
-        workforce development, fostering a skilled workforce and encouraging diversity in the field.
+        <span class="font-bold">Generalist capability of MFM:</span> Recent studies have revealed that the prominent perceptual
+        and reasoning abilities of multi-modal large language models (MLLMs) can enhance embodied agents' decision-making
+        (19). Furthermore, the massive knowledge acquired from pre-training and the ability to decompose tasks can make it
+        easier for embodied agents to generalize to new environments and tasks(6). We encourage studies to explore these
+        crucial capabilities of MFMs that can contribute to significant performance gains for embodied agents. Tentative
+        research questions: what potential capabilities do MFM possess that can empower embodied agents, and how can these
+        capabilities be further improved and evaluated?
+      </div><div class="mb-4">
+        <span class="font-bold">Multi-modal foundation model for embodied agents:</span> The generalist abilities and extensive
+        knowledge of MFMs can potentially address complex, long-horizon, and open-ended EAI tasks that elude traditional
+        methods. We welcome research that leverages MFMs to guide high-level perception and planning (8), assist with low-level
+        control and execution (27), or directly control physical entities on an end-to-end basis (4). We also encourage the
+        exploration of innovative applications of MFMs and novel framework designs for embodied agents. Tentative research
+        questions: what constitutes an effective system architecture for MFM-based embodied agents, and how can MFM augment
+        the perceptual and decision-making capabilities?
+      </div><div class="mb-4">
+        <span class="font-bold">Generative models as world simulators:</span> Simulators for EAI scenarios need to perform
+        high-fidelity simulations of physical laws in the real world, such as parallax, visual contrast, and linear perspective,
+        both visually and in terms of interaction feedback. Recent works like Sora have preliminarily shown that, in specific
+        scenarios, effective simulation is feasible, making it increasingly possible to simulate the real world based on
+        controllably generated content. Tentative research questions: Can generative models be used as physics-aware world
+        models, and what benchmarks or evaluation criteria should be developed to assess the fidelity of these simulations?
+      </div><div class="mb-4">
+        <span class="font-bold">Data collection for imitation learning:</span> The accumulation of diverse and large-scale
+        demonstrations is essential for improving the adaptability and proficiency of robot imitation learning (IL). When
+        MFM is introduced to construct embodied agents, the existing data within the field of robotics becomes even more
+        insufficient. We welcome studies that gather a rich and varied dataset for IL (10) or collect in-the-wild data cost-effectively
+        and design policy to learn from it (11). Tentative research questions: How to efficiently collect demonstrations
+        for IL besides teleoperation, and how to efficiently use the collected demonstrations (especially how to bridge gaps
+        in different domains).
       </div>
     </Fragment>
     <Fragment slot="bg">
@@ -81,14 +92,18 @@ const metadata = {
   <Content id="Call-For-Papers">
     <Fragment slot="title"> Call For Papers </Fragment>
     <Fragment slot="content"
-      >Topics include but are not limited to:
-      <li class="ml-4">Training and evaluation of MFM in open-ended scenar ios (14; 22)</li>
-      <li class="ml-4">Data collection for training Embodied AI Agents and corre sponding MFM (6; 9; 10)</li>
-      <li class="ml-4">Framework design for MFM-powered embodied agents (20; 16)</li>
-      <li class="ml-4">Decision-making in Embodied Agents empowered by MFM(8; 1; 12)</li>
-      <li class="ml-4">Low-level control in Embodied Agents empowered by MFM(13; 3)</li>
-      <li class="ml-4">Evaluation and simulation of Embodied Agents (21)</li>
-      <li class="ml-4">Limitations of MFM in empowering Embodied AI</li>
+      >This workshop is designed to unite researchers and practitioners from MFM and EAI, providing a platform to
+      discuss the most recent advancements, methodologies, and practical applications. By encouraging collaboration
+      between these two domains, we aim to create new opportunities to tackle complex challenges at the intersection of
+      both fields. We invite submissions on the following topics:
+      <li class="ml-4">Training and evaluation of MFM in open-ended scenarios (17; 26)</li>
+      <li class="ml-4">Data collection for training embodied Agents (7; 10; 12; 6)</li>
+      <li class="ml-4">Framework designs for MFM-powered embodied agents (23; 19)</li>
+      <li class="ml-4">Perception and high-level planning in embodied agents empowered by MFM (9; 1; 15)</li>
+      <li class="ml-4">Decision-making and low-level control in embodied agents empowered by MFM (16; 2)</li>
+      <li class="ml-4">Evaluation of the capability of embodied agents (24)</li>
+      <li class="ml-4">Generative model as world simulator (25)</li>
+      <li class="ml-4">Limitations of MFM in empowering EAI</li>
     </Fragment></Content
   >
 
@@ -539,15 +554,247 @@ const metadata = {
   <Content id="References">
     <Fragment slot="title"> References </Fragment>
     <Fragment slot="content">
-      <p>
-        [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
-        models at runtime, 2023.
+      <p class="text-slate-500">
+        [1] Ajay, A., Han, S., Du, Y., Li, S., Gupta, A., Jaakkola, T., Tenenbaum, J., Kaelbling, L., Srivastava, A.,
+        Agrawal, P.: Compositional foundation models for hierarchical planning (2023)
       </p>
-      <p>
-        [2] M. Bhatt, S. Chennabasappa, C. Nikolaidis, S. Wan, I. Evtimov, D. Gabi, D. Song, F. Ahmad, C. Aschermann, L.
-        Fontana, S. Frolov, R. P. Giri, D. Kapil, Y. Kozyrakis, D. LeBlanc, J. Mi lazzo, A. Straumann, G. Synnaeve, V.
-        Vontimitta, S. Whitman, and J. Saxe. Purple llama cyberseceval: A secure coding benchmark for language models,
-        2023.
+      <p class="text-slate-500">
+        [2] Baker, B., Akkaya, I., Zhokov, P., Huizinga, J., Tang, J., Ecoffet, A., Houghton, B., Sampedro, R., Clune,
+        J.: Video pretraining (vpt): Learning to act by watching unlabeled online videos. Advances in Neural Information
+        Processing Systems 35, 24639–24654 (2022)
+      </p>
+      <p class="text-slate-500">
+        [3] Betker, J., Goh, G., Jing, L., Brooks, T., Wang, J., Li, L., Ouyang, L., Zhuang, J., Lee, J., Guo, Y., et
+        al.: Improving image generation with better captions. Com- puter Science. https://cdn. openai.
+        com/papers/dall-e-3. pdf 2(3), 8 (2023)
+      </p>
+      <p class="text-slate-500">
+        [4] Brohan, A., Brown, N., Carbajal, J., Chebotar, Y., Chen, X., Choromanski, K., Ding, T., Driess, D., Dubey,
+        A., Finn, C., et al.: Rt-2: Vision-language- action models transfer web knowledge to robotic control. arXiv
+        preprint arXiv:2307.15818 (2023)
+      </p>
+      <p class="text-slate-500">
+        [5] Brooks, T., Peebles, B., Holmes, C., DePue, W., Guo, Y., Jing, L., Schnurr, D., Taylor, J., Luhman, T.,
+        Luhman, E., Ng, C., Wang, R., Ramesh, A.: Video generation models as world simulators (2024),
+        https://openai.com/research/ video-generation-models-as-world-simulators
+      </p>
+      <p class="text-slate-500">
+        [6] Chen, Z., Shi, Z., Lu, X., He, L., Qian, S., Fang, H.S., Yin, Z., Ouyang, W., Shao, J., Qiao, Y., et al.:
+        Rh20t-p: A primitive-level robotic dataset towards composable generalization agents. arXiv preprint
+        arXiv:2403.19622 (2024)
+      </p>
+      <p class="text-slate-500">
+        [7] Collaboration, O.X.E., Padalkar, A., Pooley, A., Jain, A., Bewley, A., Herzog, A., Irpan, A., Khazatsky, A.,
+        Rai, A., Singh, A., Brohan, A., Raffin, A., Wahid, A., Burgess-Limerick, B., Kim, B., Sch ̈olkopf, B., Ichter,
+        B., Lu, C., Xu, C., Finn, C., Xu, C., Chi, C., Huang, C., Chan, C., Pan, C., Fu, C., Devin, C., Driess, D.,
+        Pathak, D., Shah, D., B ̈uchler, D., Kalashnikov, D., Sadigh, D., Johns, E., Ceola, F., Xia, F., Stulp, F., Zhou,
+        G., Sukhatme, G.S., Salhotra, G., Yan, G., Schiavi, G., Su, H., Fang, H.S., Shi, H., Amor, H.B., Christensen,
+        H.I., Furuta, H., Walke, H., Fang, H., Mordatch, I., Radosavovic, I., Leal, I., Liang, J., Kim, J., Schneider,
+        J., Hsu, J., Bohg, J., Bingham, J., Wu, J., Wu, J., Luo, J., Gu, J., Tan, J., Oh, J., Malik, J., Tompson, J.,
+        Yang, J., Lim, J.J., Silv ́erio, J., Han, J., Rao, K., Pertsch, K., Hausman, K., Go, K., Gopalakrishnan, K.,
+        Goldberg, K., Byrne, K., Oslund, K., Kawa- harazuka, K., Zhang, K., Majd, K., Rana, K., Srinivasan, K., Chen,
+        L.Y., Pinto, L., Tan, L., Ott, L., Lee, L., Tomizuka, M., Du, M., Ahn, M., Zhang, M., Ding, M., Srirama, M.K.,
+        Sharma, M., Kim, M.J., Kanazawa, N., Hansen, N., Heess, N., Joshi, N.J., Suenderhauf, N., Palo, N.D.,
+        Shafiullah, N.M.M., Mees, O., Kroemer, O., Sanketi, P.R., Wohlhart, P., Xu, P., Sermanet, P., Sundaresan, P.,
+        Vuong, Q., Rafailov, R., Tian, R., Doshi, R., Mart ́ın-Mart ́ın, R., Mendonca, R., Shah, R., Hoque, R., Julian,
+        R., Bustamante, S., Kirmani, S., Levine, S., Moore, S., Bahl, S., Dass, S., Song, S., Xu, S., Haldar, S.,
+        Adebola, S., Guist, S., Nasiriany, S., Schaal, S., Welker, S., Tian, S., Dasari, S., Belkhale, S., Osa, T.,
+        Harada, T., Matsushima, T., Xiao, T., Yu, T., Ding, T., Davchev, T., Zhao, T.Z., Armstrong, T., Darrell, T.,
+        Jain, V., Vanhoucke, V., Zhan, W., Zhou, W., Burgard, W., Chen, X., Wang, X., Zhu, X., Li, X., Lu, Y., Chebotar,
+        Y., Zhou, Y., Zhu, Y., Xu, Y., Wang, Y., Bisk, Y., Cho, Y., Lee, Y., Cui, Y., hua Wu, Y., Tang, Y., Zhu, Y., Li,
+        Y., Iwasawa, Y., Matsuo, Y., Xu, Z., Cui, Z.J.: Open X-Embodiment: Robotic learning datasets and RT-X models.
+        https: //arxiv.org/abs/2310.08864 (2023)
+      </p>
+      <p class="text-slate-500">
+        [8] Driess, D., Xia, F., Sajjadi, M.S., Lynch, C., Chowdhery, A., Ichter, B., Wahid, A., Tompson, J., Vuong, Q.,
+        Yu, T., et al.: Palm-e: An embodied multimodal language model. arXiv preprint arXiv:2303.03378 (2023)
+      </p>
+      <p class="text-slate-500">
+        [9] Du, Y., Yang, M., Dai, B., Dai, H., Nachum, O., Tenenbaum, J.B., Schuurmans, D., Abbeel, P.: Learning uni-
+        versal policies via text-guided video generation. arXiv preprint arXiv:2302.00111 (2023)
+      </p>
+      <p class="text-slate-500">
+        [10] Fang, H.S., Fang, H., Tang, Z., Liu, J., Wang, J., Zhu, H., Lu, C.: Rh20t: A robotic dataset for learning
+        diverse skills in one-shot. arXiv preprint arXiv:2307.00595 (2023)
+      </p>
+      <p class="text-slate-500">
+        [11] Fang, H., Fang, H.S., Wang, Y., Ren, J., Chen, J., Zhang, R., Wang, W., Lu, C.: Airexo: Low-cost
+        exoskeletons for learning whole-arm manipulation in the wild. arXiv preprint arXiv:2309.14975 (2023)
+      </p>
+      <p class="text-slate-500">
+        [12] Fu, Z., Zhao, T.Z., Finn, C.: Mobile aloha: Learning bimanual mobile manipulation with low-cost wholebody
+        teleoperation. In: arXiv (2024)
+      </p>
+      <p class="text-slate-500">
+        [13] Girdhar, R., El-Nouby, A., Liu, Z., Singh, M., Alwala, K.V., Joulin, A., Misra, I.: Imagebind: One
+        embedding space to bind them all. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+        Recognition. pp. 15180–15190 (2023)
+      </p>
+      <p class="text-slate-500">
+        [14] Lab, P.Y., etc., T.A.: Open-sora-plan (Apr 2024). https://doi.org/10.5281/zenodo.10948109, https:
+        //doi.org/10.5281/zenodo.10948109
+      </p>
+      <p class="text-slate-500">
+        [15] Lai, B., Dai, X., Chen, L., Pang, G., Rehg, J.M., Liu, M.: Lego: Learning egocentric action frame
+        generation via visual instruction tuning. arXiv preprint arXiv:2312.03849 (2023)
+      </p>
+      <p class="text-slate-500">
+        [16] Lifshitz, S., Paster, K., Chan, H., Ba, J., McIlraith, S.: Steve-1: A generative model for text-to-behavior
+        in minecraft. arXiv preprint arXiv:2306.00937 (2023)
+      </p>
+      <p class="text-slate-500">
+        [17] Liu, H., Li, C., Li, Y., Lee, Y.J.: Improved baselines with visual instruction tuning (2023)
+      </p>
+      <p class="text-slate-500">
+        [18] OpenAI: Gpt-4v(ision) system card (2023), https://openai.com/research/ gpt-4v-system-card
+      </p>
+      <p class="text-slate-500">
+        [19] Qin, Y., Zhou, E., Liu, Q., Yin, Z., Sheng, L., Zhang, R., Qiao, Y., Shao, J.: Mp5: A multi-modal openended
+        embodied system in minecraft via active perception. arXiv preprint arXiv:2312.07472 (2023)
+      </p>
+      <p class="text-slate-500">
+        [20] Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P.,
+        Clark, J., et al.: Learning transferable visual models from natural language supervision. In: International
+        conference on machine learning. pp. 8748–8763. PMLR (2021)
+      </p>
+      <p class="text-slate-500">
+        [21] Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.: High-resolution image synthesis with latent
+        diffusion models. In: Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. pp.
+        10684–10695 (2022)
+      </p>
+      <p class="text-slate-500">
+        [22] Team, G., Anil, R., Borgeaud, S., Wu, Y., Alayrac, J.B., Yu, J., Soricut, R., Schalkwyk, J., Dai, A.M.,
+        Hauth, A., Millican, K., Silver, D., Petrov, S., Johnson, M., Antonoglou, I., Schrittwieser, J., Glaese, A.,
+        Chen, J., Pitler, E., Lillicrap, T., Lazaridou, A., Firat, O., Molloy, J., Isard, M., Barham, P.R., Hennigan,
+        T., Lee, B., Viola, F., Reynolds, M., Xu, Y., Doherty, R., Collins, E., Meyer, C., Rutherford, E., Moreira, E.,
+        Ayoub, K., Goel, M., Tucker, G., Piqueras, E., Krikun, M., Barr, I., Savinov, N., Danihelka, I., Roelofs, B.,
+        White, A., Andreassen, A., von Glehn, T., Yagati, L., Kazemi, M., Gonzalez, L., Khalman, M., Sygnowski, J.,
+        Frechette, A., Smith, C., Culp, L., Proleev, L., Luan, Y., Chen, X., Lottes, J., Schucher, N., Lebron, F.,
+        Rrustemi, A., Clay, N., Crone, P., Kocisky, T., Zhao, J., Perz, B., Yu, D., Howard, H., Bloniarz, A., Rae, J.W.,
+        Lu, H., Sifre, L., Maggioni, M., Alcober, F., Garrette, D., Barnes, M., Thakoor, S., Austin, J., Barth-Maron,
+        G., Wong, W., Joshi, R., Chaabouni, R., Fatiha, D., Ahuja, A., Liu, R., Li, Y., Cogan, S., Chen, J., Jia, C.,
+        Gu, C., Zhang, Q., Grimstad, J., Hartman, A.J., Chadwick, M., Tomar, G.S., Garcia, X., Senter, E., Taropa, E.,
+        Pillai, T.S., Devlin, J., Laskin, M., de Las Casas, D., Valter, D., Tao, C., Blanco, L., Badia, A.P., Reitter,
+        D., Chen, M., Brennan, J., Rivera, C., Brin, S., Iqbal, S., Surita, G., Labanowski, J., Rao, A., Winkler, S.,
+        Parisotto, E., Gu, Y., Olszewska, K., Zhang, Y., Addanki, R., Miech, A., Louis, A., Shafey, L.E., Teplyashin,
+        D., Brown, G., Catt, E., Attaluri, N., Balaguer, J., Xiang, J., Wang, P., Ashwood, Z., Briukhov, A., Webson, A.,
+        Ganapathy, S., Sanghavi, S., Kannan, A., Chang, M.W., Stjerngren, A., Djolonga, J., Sun, Y., Bapna, A.,
+        Aitchison, M., Pejman, P., Michalewski, H., Yu, T., Wang, C., Love, J., Ahn, J., Bloxwich, D., Han, K.,
+        Humphreys, P., Sellam, T., Bradbury, J., Godbole, V., Samangooei, S., Damoc, B., Kaskasoli, A., Arnold, S.M.R.,
+        Vasudevan, V., Agrawal, S., Riesa, J., Lepikhin, D., Tanburn, R., Srinivasan, S., Lim, H., Hodkinson, S., Shyam,
+        P., Fer- ret, J., Hand, S., Garg, A., Paine, T.L., Li, J., Li, Y., Giang, M., Neitz, A., Abbas, Z., York, S.,
+        Reid, M., Cole, E., Chowdhery, A., Das, D., Rogozi ́nska, D., Nikolaev, V., Sprechmann, P., Nado, Z., Zilka, L.,
+        Prost, F., He, L., Monteiro, M., Mishra, G., Welty, C., Newlan, J., Jia, D., Allamanis, M., Hu, C.H., de
+        Liedekerke, R., Gilmer, J., Saroufim, C., Rijhwani, S., Hou, S., Shrivastava, D., Baddepudi, A., Goldin, A.,
+        Ozturel, A., Cassirer, A., Xu, Y., Sohn, D., Sachan, D., Amplayo, R.K., Swanson, C., Petrova, D., Narayan, S.,
+        Guez, A.,Brahma, S., Landon, J., Patel, M., Zhao, R., Villela, K., Wang, L., Jia, W., Rahtz, M., Gim ́enez, M.,
+        Yeung, L., Lin, H., Keeling, J., Georgiev, P., Mincu, D., Wu, B., Haykal, S., Saputro, R., Vodrahalli, K., Qin,
+        J., Cankara, Z., Sharma, A., Fernando, N., Hawkins, W., Neyshabur, B., Kim, S., Hutter, A., Agrawal, P.,
+        Castro-Ros, A., van den Driessche, G., Wang, T., Yang, F., yiin Chang, S., Komarek, P., McIlroy, R., Lu ˇci ́c,
+        M., Zhang, G., Farhan, W., Sharman, M., Natsev, P., Michel, P., Cheng, Y., Bansal, Y., Qiao, S., Cao, K.,
+        Shakeri, S., Butterfield, C., Chung, J., Rubenstein, P.K., Agrawal, S., Mensch, A., Soparkar, K., Lenc, K.,
+        Chung, T., Pope, A., Maggiore, L., Kay, J., Jhakra, P., Wang, S., Maynez, J., Phuong, M., Tobin, T., Tacchetti,
+        A., Trebacz, M., Robinson, K., Katariya, Y., Riedel, S., Bailey, P., Xiao, K., Ghelani, N., Aroyo, L., Slone,
+        A., Houlsby, N., Xiong, X., Yang, Z., Gribovskaya, E., Adler, J., Wirth, M., Lee, L., Li, M., Kagohara, T.,
+        Pavagadhi, J., Bridgers, S., Bortsova, A., Ghemawat, S., Ahmed, Z., Liu, T., Powell, R., Bolina, V., Iinuma, M.,
+        Zablotskaia, P., Besley, J., Chung, D.W., Dozat, T., Comanescu, R., Si, X., Greer, J., Su, G., Polacek, M.,
+        Kaufman, R.L., Tokumine, S., Hu, H., Buchatskaya, E., Miao, Y., Elhawaty, M., Siddhant, A., Tomasev, N., Xing,
+        J., Greer, C., Miller, H., Ashraf, S., Roy, A., Zhang, Z., Ma, A., Filos, A., Besta, M., Blevins, R., Klimenko,
+        T., Yeh, C.K., Changpinyo, S., Mu, J., Chang, O., Pajarskas, M., Muir, C., Cohen, V., Lan, C.L., Haridasan, K.,
+        Marathe, A., Hansen, S., Douglas, S., Samuel, R., Wang, M., Austin, S., Lan, C., Jiang, J., Chiu, J., Lorenzo,
+        J.A., Sj ̈osund, L.L., Cevey, S., Gleicher, Z., Avrahami, T., Boral, A., Srinivasan, H., Selo, V., May, R.,
+        Aisopos, K., Hussenot, L., Soares, L.B., Baumli, K., Chang, M.B., Recasens, A., Caine, B., Pritzel, A., Pavetic,
+        F., Pardo, F., Gergely, A., Frye, J., Ramasesh, V., Horgan, D., Badola, K., Kassner, N., Roy, S., Dyer, E.,
+        Campos, V., Tomala, A., Tang, Y., Badawy, D.E., White, E., Mustafa, B., Lang, O., Jindal, A., Vikram, S., Gong,
+        Z., Caelles, S., Hemsley, R., Thornton, G., Feng, F., Stokowiec, W., Zheng, C., Thacker, P., C ̧ a ̆glar ̈Unl ̈u,
+        Zhang, Z., Saleh, M., Svensson, J., Bileschi, M., Patil, P., Anand, A., Ring, R., Tsihlas, K., Vezer, A., Selvi,
+        M., Shevlane, T., Rodriguez, M., Kwiatkowski, T., Daruki, S., Rong, K., Dafoe, A., FitzGerald, N., Gu-Lemberg,
+        K., Khan, M., Hendricks, L.A., Pellat, M., Feinberg, V., CobonKerr, J., Sainath, T., Rauh, M., Hashemi, S.H.,
+        Ives, R., Hasson, Y., Li, Y., Noland, E., Cao, Y., Byrd, N., Hou, L., Wang, Q., Sottiaux, T., Paganini, M.,
+        Lespiau, J.B., Moufarek, A., Hassan, S., Shivakumar, K., van Amersfoort, J., Mandhane, A., Joshi, P., Goyal, A.,
+        Tung, M., Brock, A., Sheahan, H., Misra, V., Li, C., Raki ́cevi ́c, N., Dehghani, M., Liu, F., Mittal, S., Oh, J.,
+        Noury, S., Sezener, E., Huot, F., Lamm, M., Cao, N.D., Chen, C., Elsayed, G., Chi, E., Mahdieh, M., Tenney, I.,
+        Hua, N., Petrychenko, I., Kane, P., Scandinaro, D., Jain, R., Uesato, J., Datta, R., Sadovsky, A., Bunyan, O.,
+        Rabiej, D., Wu, S., Zhang, J., Vasudevan, G., Leurent, E., Alnahlawi, M., Georgescu, I., Wei, N., Zheng, I.,
+        Chan, B., Rabinovitch, P.G., Stanczyk, P., Zhang, Y., Steiner, D., Naskar, S., Azzam, M., Johnson, M., Paszke,
+        A., Chiu, C.C., Elias, J.S., Mohiuddin, A., Muhammad, F., Miao, J., Lee, A., Vieillard, N., Potluri, S., Park,
+        J., Davoodi, E., Zhang, J., Stanway, J., Garmon, D., Karmarkar, A., Dong, Z., Lee, J., Kumar, A., Zhou, L.,
+        Evens, J., Isaac, W., Chen, Z., Jia, J., Levskaya, A., Zhu, Z., Gorgolewski, C., Grabowski, P., Mao, Y., Magni,
+        A., Yao, K., Snaider, J., Casagrande, N., Suganthan, P., Palmer, E., Irving, G., Loper, E., Faruqui, M.,
+        Arkatkar, I., Chen, N., Shafran, I., Fink, M., Casta ̃no, A., Giannoumis, I., Kim, W., Rybi ́nski, M., Sreevatsa,
+        A., Prendki, J., Soergel, D., Goedeckemeyer, A., Gierke, W., Jafari, M., Gaba, M., Wiesner, J., Wright, D.G.,
+        Wei, Y., Vashisht, H., Kulizhskaya, Y., Hoover, J., Le, M., Li, L., Iwuanyanwu, C., Liu, L., Ramirez, K.,
+        Khorlin, A., Cui, A., LIN, T., Georgiev, M., Wu, M., Aguilar, R., Pallo, K., Chakladar, A., Repina, A., Wu, X.,
+        van der Weide, T., Ponnapalli, P., Kaplan, C., Simsa, J., Li, S., Dousse, O., Yang, F., Piper, J., Ie, N., Lui,
+        M., Pasumarthi, R., Lintz, N., Vijayakumar, A., Thiet, L.N., Andor, D., Valenzuela, P., Paduraru, C., Peng, D.,
+        Lee, K., Zhang, S., Greene, S., Nguyen, D.D., Kurylowicz, P., Velury, S., Krause, S., Hardin, C., Dixon, L.,
+        Janzer, L., Choo, K., Feng, Z., Zhang, B., Singhal, A., Latkar, T., Zhang, M., Le, Q., Abellan, E.A., Du, D.,
+        McKinnon, D., Antropova, N., Bolukbasi, T., Keller, O., Reid, D., Finchelstein, D., Raad, M.A., Crocker, R.,
+        Hawkins, P., Dadashi, R., Gaffney, C., Lall, S., Franko, K., Filonov, E., Bulanova, A., Leblond, R., Yadav, V.,
+        Chung, S., Askham, H., Cobo, L.C., Xu, K., Fischer, F., Xu, J., Sorokin, C., Alberti, C., Lin, C.C., Evans, C.,
+        Zhou, H., Dimitriev, A., Forbes, H., Banarse, D., Tung, Z., Liu, J., Omernick, M., Bishop, C., Kumar, C.,
+        Sterneck, R., Foley, R., Jain, R., Mishra, S., Xia, J., Bos, T., Cideron, G., Amid, E., Piccinno, F., Wang, X.,
+        Banzal, P., Gurita, P., Noga, H., Shah, P., Mankowitz, D.J., Polozov, A., Kushman, N., Krakovna, V., Brown, S.,
+        Bateni, M., Duan, D., Firoiu, V., Thotakuri, M., Natan, T., Mohananey, A., Geist, M., Mudgal, S., Girgin, S.,
+        Li, H., Ye, J., Roval, O., Tojo, R., Kwong, M., Lee-Thorp, J., Yew, C., Yuan, Q., Bagri, S., Sinopalnikov, D.,
+        Ramos, S., Mellor, J., Sharma, A., Severyn, A., Lai, J., Wu, K., Cheng, H.T., Miller, D., Sonnerat, N., Vnukov,
+        D., Greig, R., Beattie, J., Caveness, E., Bai, L., Eisenschlos, J., Korchemniy, A., Tsai, T., Jasarevic, M.,
+        Kong, W., Dao, P., Zheng, Z., Liu, F., Yang, F., Zhu, R., Geller, M., Teh, T.H., Sanmiya, J., Gladchenko,E.,
+        Trdin, N., Sozanschi, A., Toyama, D., Rosen, E., Tavakkol, S., Xue, L., Elkind, C., Woodman, O., Carpenter, J.,
+        Papamakarios, G., Kemp, R., Kafle, S., Grunina, T., Sinha, R., Talbert, A., Goyal, A., Wu, D., Owusu-Afriyie,
+        D., Du, C., Thornton, C., Pont-Tuset, J., Narayana, P., Li, J., Fatehi, S., Wieting, J., Ajmeri, O., Uria, B.,
+        Zhu, T., Ko, Y., Knight, L., H ́eliou, A., Niu, N., Gu, S., Pang, C., Tran, D., Li, Y., Levine, N., Stolovich,
+        A., Kalb, N., Santamaria-Fernandez, R., Goenka, S., Yustalim, W., Strudel, R., Elqursh, A., Lakshminarayanan,
+        B., Deck, C., Upadhyay, S., Lee, H., Dusenberry, M., Li, Z., Wang, X., Levin, K., Hoffmann, R., Holtmann-Rice,
+        D., Bachem, O., Yue, S., Arora, S., Malmi, E., Mirylenka, D., Tan, Q., Koh, C., Yeganeh, S.H., P ̃oder, S.,
+        Zheng, S., Pongetti, F., Tariq, M., Sun, Y., Ionita, L., Seyedhosseini, M., Tafti, P., Kotikalapudi, R., Liu,
+        Z., Gulati, A., Liu, J., Ye, X., Chrzaszcz, B., Wang, L., Sethi, N., Li, T., Brown, B., Singh, S., Fan, W.,
+        Parisi, A., Stanton, J., Kuang, C., Koverkathu, V., Choquette-Choo, C.A., Li, Y., Lu, T., Ittycheriah, A.,
+        Shroff, P., Sun, P., Varadarajan, M., Bahargam, S., Willoughby, R., Gaddy, D., Dasgupta, I., Desjardins, G.,
+        Cornero, M., Robenek, B., Mittal, B., Albrecht, B., Shenoy, A., Moiseev, F., Jacobsson, H., Ghaffarkhah, A.,
+        Rivi `ere, M., Walton, A., Crepy, C., Parrish, A., Liu, Y., Zhou, Z., Farabet, C., Radebaugh, C., Srinivasan,
+        P., van der Salm, C., Fidjeland, A., Scellato, S., Latorre-Chimoto, E., Klimczak-Pluci ́nska, H., Bridson, D., de
+        Cesare, D., Hudson, T., Mendolicchio, P., Walker, L., Morris, A., Penchev, I., Mauger, M., Guseynov, A., Reid,
+        A., Odoom, S., Loher, L., Cotruta, V., Yenugula, M., Grewe, D., Petrushkina, A., Duerig, T., Sanchez, A.,
+        Yadlowsky, S., Shen, A., Globerson, A., Kurzrok, A., Webb, L., Dua, S., Li, D., Lahoti, P., Bhupatiraju, S.,
+        Hurt, D., Qureshi, H., Agarwal, A., Shani, T., Eyal, M., Khare, A., Belle, S.R., Wang, L., Tekur, C., Kale,
+        M.S., Wei, J., Sang, R., Saeta, B., Liechty, T., Sun, Y., Zhao, Y., Lee, S., Nayak, P., Fritz, D., Vuyyuru,
+        M.R., Aslanides, J., Vyas, N., Wicke, M., Ma, X., Bilal, T., Eltyshev, E., Balle, D., Martin, N., Cate, H.,
+        Manyika, J., Amiri, K., Kim, Y., Xiong, X., Kang, K., Luisier, F., Tripuraneni, N., Madras, D., Guo, M., Waters,
+        A., Wang, O., Ainslie, J., Baldridge, J., Zhang, H., Pruthi, G., Bauer, J., Yang, F., Mansour, R., Gelman, J.,
+        Xu, Y., Polovets, G., Liu, J., Cai, H., Chen, W., Sheng, X., Xue, E., Ozair, S., Yu, A., Angermueller, C., Li,
+        X., Wang, W., Wiesinger, J., Koukoumidis, E., Tian, Y., Iyer, A., Gurumurthy, M., Goldenson, M., Shah, P.,
+        Blake, M., Yu, H., Urbanowicz, A., Palomaki, J., Fernando, C., Brooks, K., Durden, K., Mehta, H., Momchev, N.,
+        Rahimtoroghi, E., Georgaki, M., Raul, A., Ruder, S., Redshaw, M., Lee, J., Jalan, K., Li, D., Perng, G.,
+        Hechtman, B., Schuh, P., Nasr, M., Chen, M., Milan, K., Mikulik, V., Strohman, T., Franco, J., Green, T.,
+        Hassabis, D., Kavukcuoglu, K., Dean, J., Vinyals, O.: Gemini: A family of highly capable multimodal models
+        (2023)
+      </p>
+      <p class="text-slate-500">
+        [23] Wang, G., Xie, Y., Jiang, Y., Mandlekar, A., Xiao, C., Zhu, Y., Fan, L., Anandkumar, A.: Voyager: An
+        openended embodied agent with large language models. arXiv preprint arXiv:2305.16291 (2023)
+      </p>
+      <p class="text-slate-500">
+        [24] Yang, M., Du, Y., Ghasemipour, K., Tompson, J., Kaelbling, L., Schuurmans, D., Abbeel, P.: Learning inter-
+        active real-world simulators (2024)
+      </p>
+      <p class="text-slate-500">
+        [25] Yang, M., Du, Y., Ghasemipour, K., Tompson, J., Kaelbling, L., Schuurmans, D., Abbeel, P.: Learning inter-
+        active real-world simulators (2024)
+      </p>
+      <p class="text-slate-500">
+        [26] Yin, Z., Wang, J., Cao, J., Shi, Z., Liu, D., Li, M., Sheng, L., Bai, L., Huang, X., Wang, Z., et al.:
+        Lamm: Language-assisted multi-modal instructiontuning dataset, framework, and benchmark. arXiv preprint
+        arXiv:2306.06687 (2023)
+      </p>
+      <p class="text-slate-500">
+        [27] Zhou, E., Qin, Y., Yin, Z., Huang, Y., Zhang, R., Sheng, L., Qiao, Y., Shao, J.: Mine- dreamer: Learning to
+        follow instructions via chain- of-imagination for simulated-world control. arXiv preprint arXiv:2403.12037
+        (2024)
+      </p>
+      <p class="text-slate-500">
+        [28] Zhu, D., Chen, J., Shen, X., Li, X., Elhoseiny, M.: Minigpt-4: Enhancing vision-language understanding with
+        advanced large language models. arXiv preprint arXiv:2304.10592 (2023)
       </p>
     </Fragment>
   </Content>
