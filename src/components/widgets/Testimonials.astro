@@ -5,7 +5,6 @@ import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 import type { Testimonials as Props } from '~/types';
 
-
 const {
   title = '',
   subtitle = '',
@@ -26,10 +25,25 @@ const {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, name, job, image }) => (
-          <div class="flex h-auto">
+        testimonials.map(({ title, testimonial, name, job, image ,link}) => (
+          <a class="flex h-auto cursor-pointer hover:text-primary" href={link}>
             <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
               {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
+              {image && (
+                <div class=" border-slate-200 dark:border-slate-600">
+                  {typeof image === 'string' ? (
+                    <Fragment set:html={image} />
+                  ) : (
+                    <Image
+                      class="h-80 w-80  border-slate-200 dark:border-slate-600 min-w-full min-h-full"
+                      width={400}
+                      height={400}
+                      {...(image as any)}
+                    />
+                  )}
+                </div>
+              )}
+
               {testimonial && (
                 <blockquote class="flex-auto">
                   <p class="text-muted">" {testimonial} "</p>
@@ -39,30 +53,13 @@ const {
               <hr class="border-slate-200 dark:border-slate-600 my-4" />
 
               <div class="flex items-center">
-                {image && (
-                  <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
-                    {typeof image === 'string' ? (
-                      <Fragment set:html={image} />
-                    ) : (
-                      <Image
-                        class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
-                        width={40}
-                        height={40}
-                        widths={[400, 768]}
-                        layout="fixed"
-                        {...(image as any)}
-                      />
-                    )}
-                  </div>
-                )}
-
                 <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
                   {name && <p class="text-base font-semibold">{name}</p>}
                   {job && <p class="text-xs text-muted">{job}</p>}
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         ))
     }
   </div>

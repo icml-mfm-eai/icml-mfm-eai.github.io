@@ -88,7 +88,7 @@ export interface Image {
   alt?: string;
   name?: string;
   university?: string;
-  bioLink?:string
+  bioLink?: string;
 }
 
 export interface Video {
@@ -157,6 +157,7 @@ export interface Testimonial {
   name?: string;
   job?: string;
   image?: string | unknown;
+  link?: string;
 }
 
 export interface Input {

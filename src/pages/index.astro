@@ -8,6 +8,7 @@ import { headerData } from '~/navigation';
 import Brands from '~/components/widgets/Brands.astro';
 // import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'Home',
@@ -365,7 +366,7 @@ const metadata = {
   /> -->
   <!-- Content Widget **************** -->
 
-  <Content id="Challenges"
+  <!-- <Content id="Challenges"
     ><Fragment slot="title"> Challenges</Fragment>
     <Fragment slot="content">
       <p class="mb-2">
@@ -387,6 +388,45 @@ const metadata = {
     </Fragment><Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
+  </Content> -->
+  <Content id="Challenges" title="Challenges">
+    <Fragment slot="content"
+      ><Testimonials
+        classes={{ container: 'py-0 md:py-0 lg:py-0 ' }}
+        testimonials={[
+          {
+            title: 'Track 1',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK1',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+          {
+            title: 'Track 2',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK2',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+          {
+            title: 'Track 3',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK3',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+        ]}
+      /></Fragment
+    >
   </Content>
   <!-- Brands Widget ****************** -->
 

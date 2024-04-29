@@ -1,0 +1,146 @@
+---
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+// import Timeline from '~/components/ui/Timeline.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+// import Brands from '~/components/widgets/Brands.astro';
+// import Timezone from '~/components/widgets/Timezone.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Track2 from '~/components/widgets/Track2.astro';
+import Track3 from '~/components/widgets/Track3.astro';
+import Track1 from '~/components/widgets/Track1.astro';
+import { getPermalink } from '~/utils/permalinks';
+// import Sponsor from '~/components/widgets/Sponsor.astro';
+
+const metadata = {
+  title: 'Home',
+};
+
+const headerData = {
+  links: [
+    {
+      text: 'Overview',
+      href: getPermalink('/challenges#Overview'),
+    },
+    {
+      text: 'TRACK1',
+      href: getPermalink('/challenges#TRACK1'),
+    },
+    {
+      text: 'TRACK2',
+      href: getPermalink('/challenges#TRACK2'),
+    },
+    {
+      text: 'TRACK3',
+      href: getPermalink('/challenges#TRACK3'),
+    },
+    {
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+  ],
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header {...headerData} isSticky />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="ICML 2024 Workshop"
+    actions={[{ variant: 'primary', text: 'Get Started', href: 'https://icml.cc/virtual/2024/workshop/29951' }]}
+  >
+    <Fragment slot="title">Trustworthy Multi-modal Foundation Models and AI Agents (TiFA) Challenges</Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="Overview">
+    <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
+      >Welcome to the ICML 2024 Workshop on Trustworthy in Multi-modal Foundation Models and AI Agents (TiFA)
+    </Fragment>
+    <Fragment slot="content"
+      ><div class="mb-4">
+        Multi-modal Foundation Models (MFMs) have witnessed significant advancements in various bench marks and
+        practical applications. They are proficient in a wide range of tasks, and capable of pro ducing varied
+        multimodal responses. Nowadays a couple of MFMs have been deployed as realistic applications (such as GPT-4 [18]
+        and Midjourney [25]). Meanwhile, a large variety of MFMs (like InternLM [24] and LLaVA [14]) are still under
+        further research. Furthermore, foundation models with their powerful reasoning capabilities have led to the
+        emergence of various AI Agents [19, 28]. These agents are often capable of understanding open-world
+        instructions, breaking down complex tasks, and taking steps to achieve their goals.
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Testimonials
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ' }}
+    testimonials={[
+      {
+        title: 'Track 1',
+        name: 'OpenLane Topology Challenge',
+        image: {
+          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          alt: 'Sidney Hansen Image',
+        },
+        link: '#TRACK1',
+        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+      },
+      {
+        title: 'Track 2',
+        name: 'OpenLane Topology Challenge',
+        image: {
+          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          alt: 'Sidney Hansen Image',
+        },
+        link: '#TRACK2',
+        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+      },
+      {
+        title: 'Track 3',
+        name: 'OpenLane Topology Challenge',
+        image: {
+          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          alt: 'Sidney Hansen Image',
+        },
+        link: '#TRACK3',
+        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+      },
+    ]}
+  />
+  <Track1 title="3D Occupancy Prediction" tagline="Track 1" id="TRACK1" />
+  <Track2 title="3D Occupancy Prediction" tagline="Track 2" id="TRACK2" />
+  <Track3 title="3D Occupancy Prediction" tagline="Track 3" id="TRACK3" />
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Can we submit a paper that will also be submitted to NeurIPS 2024?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Can we submit a paper that was accepted at ICLR 2024?',
+        description: 'No. ICML prohibits main conference publication from appearing concurrently at the workshops.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Will the reviews be made available to authors?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'I have a question not addressed here, whom should I contact?',
+        description: 'Email organizers at icml-tifa-workshop@googlegroups.com',
+        icon: 'tabler:help-octagon',
+      },
+    ]}
+  />
+</Layout>

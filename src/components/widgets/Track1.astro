@@ -1,0 +1,309 @@
+---
+import type { Brands as Props } from '~/types';
+import Headline from '~/components/ui/Headline.astro';
+const { title = '', subtitle = '', tagline = '', id } = Astro.props;
+---
+
+<div class="max-w-7xl mx-auto pt-24" id={id}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"></div>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Leaderboard</h2>
+
+  <div class="px-4 sm:px-6 lg:px-8">
+    <div class="sm:flex sm:items-center">
+      <div class="sm:flex-auto">
+        <li>Participating Teams: 52</li>
+        <li>Countries and Regions: 11</li>
+        <li>Submissions: 600+</li>
+        <p class="mt-2 text-sm text-gray-700">
+          This track was characterized by the greatest diversity among this challenge, with participation from teams
+          representing up to 11 countries and regions. The difference in scores between the top 5 teams was less than 10
+          points.
+        </p>
+      </div>
+    </div>
+    <div class="my-8 flow-root">
+      <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-300">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                    Name
+                  </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> Rank </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                    Country / Region
+                  </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> Institution </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                    Overall Score (primary)
+                  </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> Team Name </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> CH1 Score </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> CH2 Score </th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> CH3 Score</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white" id="track1-table-body"> </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="track1-pagination" class="my-4 flex justify-center items-center"></div>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
+  <p class="text-gray-700">
+    Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. nuPlan
+    introduces long-term planning of the ego vehicle and corresponding metrics. Provided as docker containers,
+    submissions are deployed for simulation and evaluation.
+  </p>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
+  <p class="text-gray-700">
+    The primary metric is the mean score over three increasingly complex modes: open-loop, closed-loop non-reactive
+    agents, and closed-loop reactive agents. Participants can follow the steps to begin the competition. To submit your
+    results on EvalAI, please follow the submission instructions.
+  </p>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
+  <div class="flex justify-center">
+    <table class="bg-white">
+      <tbody>
+        <tr>
+          <td class="w-64 border px-4 py-2">Outstanding Champion</td>
+          <td class="w-64 border px-4 py-2">USD $10,000</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">Honorable Runner-up (2nd)</td>
+          <td class="border px-4 py-2">USD $8,000</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Honorable Runner-up (3rd)</td>
+          <td class="border px-4 py-2">USD $5,000</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">Innovation Award</td>
+          <td class="border px-4 py-2">USD $5,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
+  <li>GitHub issue</li>
+  <li>nuScenes@motional.com</li>
+  <li>Slack channel: #nuplan-challenge-2023</li>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
+  <li>Driving in Real Life with Inverse Reinforcement Learning</li>
+  <li>Importance Is in Your Attention: Agent Importance Prediction for Autonomous Driving</li>
+</div>
+
+<script>
+  const track1Data = [
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    {
+      rank: 'Lindsay',
+      country: 'Developer',
+      institution: 'lindsay',
+      score: 'Member',
+      teamName: 'asdf',
+      ch1Score: 'asdf',
+      ch2Score: 'asdf',
+      ch3Score: '12',
+      name: 'asd',
+    },
+    // More track1Data...
+  ];
+
+  const pageSize = 10;
+  let currentPage = 1;
+
+  function padtrack1Data(track1Data) {
+    const remainder = track1Data.length % pageSize;
+    if (remainder !== 0) {
+      const padCount = pageSize - remainder;
+      for (let i = 0; i < padCount; i++) {
+        track1Data.push({
+          rank: '',
+          country: '',
+          institution: '',
+          score: '',
+          teamName: '',
+          ch1Score: '',
+          ch2Score: '',
+          ch3Score: '',
+          name: '&nbsp;',
+        });
+      }
+    }
+  }
+
+  function renderTable(page) {
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, track1Data.length);
+    const tableBody = document.getElementById('track1-table-body');
+    if (!tableBody) return;
+    tableBody.innerHTML = '';
+    for (let i = startIndex; i < endIndex; i++) {
+      const team = track1Data[i];
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">${team.name}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.rank}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.country}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.institution}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.score}</td>
+        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">${team.teamName}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.ch1Score}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.ch2Score}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${team.ch3Score}</td>
+      `;
+      tableBody.appendChild(row);
+    }
+  }
+
+  function renderPagination() {
+    const totalPages = Math.ceil(track1Data.length / pageSize);
+    const pagination = document.getElementById('track1-pagination');
+    if (!pagination) return;
+    pagination.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement('button');
+      button.textContent = i.toString();
+      button.classList.add('px-3', 'py-1', 'mr-2', 'border', 'rounded', 'bg-white', 'hover:bg-gray-100');
+      if (i === currentPage) {
+        button.classList.add('font-bold');
+      }
+      button.addEventListener('click', () => {
+        currentPage = i;
+        renderTable(currentPage);
+        renderPagination();
+      });
+      pagination.appendChild(button);
+    }
+  }
+  padtrack1Data(track1Data);
+  renderTable(currentPage);
+  renderPagination();
+</script>
