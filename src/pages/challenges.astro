@@ -15,7 +15,7 @@ import { getPermalink } from '~/utils/permalinks';
 // import Sponsor from '~/components/widgets/Sponsor.astro';
 
 const metadata = {
-  title: 'Home',
+  title: 'Challenges',
 };
 
 const headerData = {
@@ -85,13 +85,13 @@ const headerData = {
     testimonials={[
       {
         title: 'Track 1',
-        name: 'OpenLane Topology Challenge',
+        name: 'EgoPlan Challenge',
         image: {
           src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           alt: 'Sidney Hansen Image',
         },
         link: '#TRACK1',
-        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+        job: 'The EgoPlan Challenge aims to evaluate the potential of Multimodal Large Language Models (MLLMs) as embodied task planners in real-world scenarios. In this challenge, MLLMs are required to predict the next feasible action given a real-time task progress video, current visual observation, and an open-form language instruction as inputs. Sourced from egocentric videos of everyday household activities, the EgoPlan Challenge features realistic tasks, diverse actions, and complex real-world visual observations. ',
       },
       {
         title: 'Track 2',
@@ -115,7 +115,7 @@ const headerData = {
       },
     ]}
   />
-  <Track1 title="3D Occupancy Prediction" tagline="Track 1" id="TRACK1" />
+  <Track1 title="EgoPlan Challenge" tagline="Track 1" id="TRACK1" />
   <Track2 title="3D Occupancy Prediction" tagline="Track 2" id="TRACK2" />
   <Track3 title="3D Occupancy Prediction" tagline="Track 3" id="TRACK3" />
   <FAQs

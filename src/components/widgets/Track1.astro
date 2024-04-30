@@ -1,11 +1,28 @@
 ---
 import type { Brands as Props } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
+import Button from '../ui/Button.astro';
+import { Icon } from 'astro-icon/components';
 const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 ---
 
 <div class="max-w-7xl mx-auto pt-24" id={id}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <div class="flex gap-8 justify-center">
+    <Button
+      variant="secondary"
+      href={'https://github.com/ChenYi99/EgoPlan/tree/challenge'}
+    >
+      <span class="mr-2">{'Github'}</span>
+      <Icon name="tabler:chevron-right" class="w-6 h-6" />
+    </Button><Button
+      variant="secondary"
+      href={'#'}
+    >
+      <span class="mr-2">{'Submission'}</span>
+      <Icon name="tabler:chevron-right" class="w-6 h-6" />
+    </Button>
+  </div>
 
   <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"></div>
   <h2 class="text-center text-2xl md:text-3xl py-8">Leaderboard</h2>
