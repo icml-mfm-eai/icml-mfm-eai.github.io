@@ -10,18 +10,10 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
   <div class="max-w-7xl mx-auto pt-24" id={id}>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <div class="flex gap-8 justify-center">
-      <Button
-        variant="secondary"
-        class=""
-        href={'#'}
-      >
+      <Button variant="secondary" class="" href={'#'}>
         <span class="mr-2">{'Github'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
-      </Button><Button
-        variant="secondary"
-        class=""
-        href={'#'}
-      >
+      </Button><Button variant="secondary" class="" href={'#'}>
         <span class="mr-2">{'Submission'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
       </Button>
@@ -76,15 +68,15 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <div id="track2-pagination" class="my-4 flex justify-center items-center"></div>
     <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
     <p class="text-gray-700">
-      Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. nuPlan
-      introduces long-term planning of the ego vehicle and corresponding metrics. Provided as docker containers,
-      submissions are deployed for simulation and evaluation.
+      Unlike previous manipulation tasks, provided RH20T-P dataset are clipped by primitive skills, facilitating the
+      plan-execute paradigm. In this track, participants are required to employ VLMs for high-level planning, and the
+      decomposed subtasks are delegated to low-level controllers for executing. The submissions are evaluated in
+      simulator environments.
     </p>
     <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
     <p class="text-gray-700">
-      The primary metric is the mean score over three increasingly complex modes: open-loop, closed-loop non-reactive
-      agents, and closed-loop reactive agents. Participants can follow the steps to begin the competition. To submit
-      your results on EvalAI, please follow the submission instructions.
+      The primary metric of this track is success rate of manipulation. We provide detailed information for the dataset,
+      evaluation, and submission instructions [here].The test server is hosted on [xxx].
     </p>
     <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
     <div class="flex justify-center">
@@ -114,8 +106,10 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <li>nuScenes@motional.com</li>
     <li>Slack channel: #nuplan-challenge-2023</li>
     <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
-    <li>Driving in Real Life with Inverse Reinforcement Learning</li>
-    <li>Importance Is in Your Attention: Agent Importance Prediction for Autonomous Driving</li>
+    <li>RH20T-P: A Primitive-Level Robotic Dataset Towards Composable Generalization Agents</li>
+    <li>Look Before You Leap: Unveiling the Power of GPT-4V in Robotic Vision-Language Planning</li>
+    <li>Do As I Can, Not As I Say:Grounding Language in Robotic Affordances</li>
+    <li class="pb-8">RT-H: Action Hierarchies Using Language</li>
   </div>
 </div>
 
