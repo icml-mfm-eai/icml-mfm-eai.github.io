@@ -25,8 +25,8 @@ const {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, name, job, image ,link}) => (
-          <a class="flex h-auto cursor-pointer hover:text-primary" href={link}>
+        testimonials.map(({ title, testimonial, name, job, image, link }) => (
+          <a class="flex h-auto cursor-pointer hover:text-primary bg-white" href={link}>
             <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
               {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
               {image && (
