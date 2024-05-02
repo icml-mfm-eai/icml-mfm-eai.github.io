@@ -4,7 +4,7 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import { headerData } from '~/navigation';
-// import FAQs from '~/components/widgets/FAQs.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 // import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -27,9 +27,9 @@ const metadata = {
     <Fragment slot="title"> Multi-modal Foundation Model meets Embodied AI </Fragment>
 
     <Fragment slot="subtitle">
-      The Forty-first International Conference on Machine Learning<span class="flex text-slate-500"
+      The Forty-first International Conference on Machine Learning<br /><span class="text-slate-500"
         >@ Messe Wien Exhibition Congress Center, Vienna
-      </span><span class="text-slate-300 flex">Fri 26 Jul</span>
+      </span><br /><span class="text-slate-300">Fri 26 Jul</span>
     </Fragment>
   </Hero2>
 
@@ -111,6 +111,105 @@ const metadata = {
       <li class="ml-4">Limitations of MFM in empowering EAI</li>
     </Fragment></Content
   >
+
+  <Content id="Submission-Guide" classes={{ container: 'pb-2 md:pb-2 lg:pb-2' }}>
+    <Fragment slot="title">Submission Guide</Fragment>
+    <Fragment slot="subtitle">Submission Instructions</Fragment>
+    <Fragment slot="content" classes={{ container: 'py-2' }}>
+      <>
+        <div class="mb-8">
+          Thank you for serving as a reviewer for the MFM-EAI ICML2024 workshop. Your expertise and dedication
+          contribute greatly to the success of this event. This guideline aims to provide a clear understanding of how
+          to review papers for this workshop.
+        </div>
+
+        <ul class="list-outside list-disc">
+          <li>
+            Confidentiality. All review assignments and the content of the papers you review should be kept
+            confidential. Do not share these materials or discuss them with others unless they are also reviewers for
+            the same paper.
+          </li>
+          <li>
+            Conflict of Interest. If you recognize a conflict of interest with any paper you are assigned to review,
+            please notify the program chairs immediately.
+          </li>
+          <li>
+            Length Requirement. Any paper submission exceeding 4 pages (excluding references) should be rejected
+            directly. Please verify the length of the paper before proceeding with the review. References do not count
+            towards the page limit.
+          </li>
+          <li>
+            Review Criteria. We aim for a more inclusive and diverse selection of papers, and the quality should be a
+            primary focus. Consider the following aspects:
+          </li>
+        </ul>
+        <div class="pl-4 my-2">
+          (1) Relevance: Does the paper align with the theme of the workshop, i.e., multi-modal foundation models and
+          embodied AI?
+        </div>
+        <div class="pl-4 my-2">
+          (2) Originality: Does the paper present new ideas or results, or does it significantly build upon previous
+          work?
+        </div><div class="pl-4 my-2">
+          (3) Technical Soundness: Is the methodology correct and properly explained? Are the claims supported by
+          theoretical analysis or experimental results?
+        </div><div class="pl-4 my-2">
+          (4) Clarity: Is the paper well-written and well-structured? Is it easy for readers to understand the problem,
+          the approach, and the results?
+        </div><div class="pl-4 my-2">
+          (5) Impact: If the results are applied, do they have the potential to contribute to the advancement of
+          multi-modal foundation models and embodied AI?
+        </div>
+      </></Fragment
+    >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  <Content classes={{ container: 'py-2 md:py-2 lg:py-2 pb-12 md:pb-12 lg:pb-12' }}>
+    <Fragment slot="subtitle">Key Dates</Fragment>
+    <Fragment slot="content" classes={{ container: 'p-0' }}>
+      <!-- <Timeline
+        items={[
+          { title: 'May 06, 2024', description: 'Submissions Open' },
+          { title: 'May 23, 2024', description: 'Submission Deadline' },
+          { title: 'June 12, 2024', description: 'Acceptance Notification' },
+          { title: 'June 30, 2024', description: 'Camera-Ready Deadline' },
+          { title: 'July 26, 2024', description: 'Workshop Date' },
+        ]}
+        defaultIcon="tabler:arrow-right"
+      /> -->
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Paper Submission Deadline</td>
+              <td class="border px-4 py-2">May 23, 2024</td>
+            </tr>
+
+            <tr>
+              <td class="border px-4 py-2">Papers Assigned to Reviewers</td>
+              <td class="border px-4 py-2">May 24, 2024</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Reviews Due</td>
+              <td class="border px-4 py-2">June 5, 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex py-4">
+        All deadlines are specified in <a
+          href="https://www.timeanddate.com/time/zones/aoe"
+          class="hover:underline text-sky-600 font-medium px-2"
+          target="_blank">AoE</a
+        > (Anywhere on Earth).
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -600,6 +699,68 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment></Brands
   >
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Submission Q&A"
+    items={[
+      {
+        title: 'What is the deadline for submission?',
+        description: 'The deadline for submission is May 23, 2024, anywhere in the world.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'What is the page-limit for the submissions(4-pages, 8-pages, with or without references)? ',
+        description: 'The page limit for submissions is 4 pages, without references.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'What template do we use for the submission?',
+        description: 'The template should be the same as the one used for ICML 2024 submissions.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Are papers previously presented at other conferences accepted?',
+        description:
+          'Yes, papers previously presented at other conferences are accepted. If submitting a paper previously accepted at another conference, a copy of the acceptance notification email must be provided.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Is it fine if we submit our work to a different conference at the same time as the workshop?',
+        description:
+          "Yes, it's acceptable to submit your work to a different conference at the same time as our workshop.",
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Will the papers be archived/will there be proceedings?',
+        description:
+          'Accepted papers will not be included in the proceedings but will have a poster presentation on the day of the workshop.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Is anonymized submission required for papers?',
+        description:
+          'Yes, all submitted papers must be anonymized. Papers previously accepted at other conferences do not need to be anonymized.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Is supplementary material allowed? What formats are supported?',
+        description: 'Yes, supplementary material is optional, and supported formats include pdf, mp4, and zip.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'How will papers be reviewed?',
+        description: 'All papers will be peer-reviewed by three experts in the field in a double-blind manner.',
+        icon: 'tabler:help-octagon',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
   <Content id="References">
     <Fragment slot="title"> References </Fragment>
     <Fragment slot="content">
@@ -875,36 +1036,4 @@ const metadata = {
       });
     }
   </script>
-
-  <!-- FAQs Widget ******************* -->
-  <!-- 
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
-        icon: 'tabler:help-octagon',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs> -->
 </Layout>

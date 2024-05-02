@@ -46,6 +46,17 @@ const {
   position = 'center',
 } = Astro.props;
 
+const socialLinks = [
+  { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/ICML2024_MFMEAI' },
+  { ariaLabel: 'wechat', icon: 'tabler:brand-wechat', href: '/wechat.jpg' },
+  {
+    ariaLabel: 'slack',
+    icon: 'tabler:brand-slack',
+    href: 'https://join.slack.com/t/icml2024mfmea-yvg5436/shared_invite/zt-2hxdqu2xg-A0M_NVmg0t8r0ZtxbjliPg',
+  },
+  { ariaLabel: 'mail', icon: 'tabler:mail', href: 'mailto:icmlmfmeai@gmail.com' },
+];
+
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 ---
 
@@ -120,6 +131,27 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             </li>
           ))
         }
+        <div class="flex items-center justify-between px-4">
+          {
+            socialLinks?.length ? (
+              <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+                {socialLinks.map(({ ariaLabel, href, icon }) => (
+                  <li>
+                    <a
+                      class=" dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                      aria-label={ariaLabel}
+                      href={href}
+                    >
+                      {icon && <Icon name={icon} class="w-5 h-5" />}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              ''
+            )
+          }
+        </div>
       </ul>
     </nav>
     <!-- <div
@@ -161,5 +193,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 <style>
   .scroll {
     color: #000;
+  }
+  @media (max-width: 768px) {
+    .text-white {
+      color: #000;
+    }
   }
 </style>

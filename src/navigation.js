@@ -33,6 +33,6 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
 };
