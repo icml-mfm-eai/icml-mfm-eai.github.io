@@ -29,7 +29,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 pt-8 md:pt-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
@@ -69,7 +69,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         ))
       }
     </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+    <div class="md:flex md:items-center md:justify-between py-6">
       {
         socialLinks?.length ? (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
@@ -91,9 +91,99 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
+      <div class="text-sm mx-auto dark:text-muted">
         <Fragment set:html={footNote} />
+        <div id="mc_embed_shell">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+
+          <div id="mc_embed_signup">
+            <form
+              action="https://gmail.us22.list-manage.com/subscribe/post?u=45621efd93c6f2d0c6dcaee36&id=8751e21b77&f_id=00cbc1e1f0"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+            >
+              <div id="mc_embed_signup_scroll">
+                <h2>Subscribe Us</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input
+                    type="email"
+                    name="EMAIL"
+                    class="required email"
+                    id="mce-EMAIL"
+                    required=""
+                    value=""
+                  />
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_45621efd93c6f2d0c6dcaee36_8751e21b77" tabindex="-1" value="" />
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
+                    <p style="margin: 0px auto;">
+                      <a href="http://eepurl.com/iM0AWU" title="Mailchimp - email marketing made easy and fun"
+                        ><span style="display: inline-block; background-color: transparent; border-radius: 4px;"
+                          ><img
+                            class="refferal_badge"
+                            src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                            alt="Intuit Mailchimp"
+                            style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"
+                          /></span
+                        ></a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script
+    type="text/javascript"
+  >
+    // eslint-disable-next-line no-unused-vars
+    (function ($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      // eslint-disable-next-line no-undef
+      fnames[0] = 'EMAIL';
+      // eslint-disable-next-line no-undef
+      ftypes[0] = 'email';
+      // eslint-disable-next-line no-undef
+      fnames[1] = 'FNAME';
+      // eslint-disable-next-line no-undef
+      ftypes[1] = 'text';
+      // eslint-disable-next-line no-undef
+      fnames[2] = 'LNAME';
+      // eslint-disable-next-line no-undef
+      ftypes[2] = 'text';
+      // eslint-disable-next-line no-undef
+      fnames[3] = 'ADDRESS';
+      // eslint-disable-next-line no-undef
+      ftypes[3] = 'address';
+      // eslint-disable-next-line no-undef
+      fnames[4] = 'PHONE';
+      // eslint-disable-next-line no-undef
+      ftypes[4] = 'phone';
+      // eslint-disable-next-line no-undef
+      fnames[5] = 'BIRTHDAY';
+      // eslint-disable-next-line no-undef
+      ftypes[5] = 'birthday';
+      // eslint-disable-next-line no-undef
+    })(jQuery);
+    // eslint-disable-next-line no-unused-vars, no-undef
+    var $mcj = jQuery.noConflict(true);
+  </script>
 </footer>
