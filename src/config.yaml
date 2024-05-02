@@ -11,7 +11,7 @@ metadata:
   title:
     default: ICML-MFM-EAI WorkShop
     template: '%s — ICML-MFM-EAI WorkShop'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "ICML-MFM-EAI WorkShop"
   robots:
     index: true
     follow: true
