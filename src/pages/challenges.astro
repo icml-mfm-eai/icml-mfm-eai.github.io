@@ -60,13 +60,9 @@ const headerData = {
 
   <!-- Content Widget **************** -->
 
-  <Content id="Overview">
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
       >Welcome to the ICML 2024 Workshop on Multi-modal Foundation Model meets Embodied AI
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -107,7 +103,7 @@ const headerData = {
   />
   <Track1 title="EgoPlan Challenge" tagline="Track 1" id="TRACK1" />
   <Track2 title="Composable Generalization Agent Challenge" tagline="Track 2" id="TRACK2" />
-  <Track3 title="3D Occupancy Prediction" tagline="Track 3" id="TRACK3" />
+  <Track3 title="World Model Challenge" tagline="Track 3" id="TRACK3" />
   <FAQs
     title="Frequently Asked Questions"
     items={[

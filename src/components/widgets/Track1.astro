@@ -6,25 +6,19 @@ import { Icon } from 'astro-icon/components';
 const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 ---
 
-<div class="max-w-7xl mx-auto pt-24" id={id}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <div class="flex gap-8 justify-center">
-    <Button
-      variant="secondary"
-      href={'https://github.com/ChenYi99/EgoPlan/tree/challenge'}
-    >
-      <span class="mr-2">{'Github'}</span>
-      <Icon name="tabler:chevron-right" class="w-6 h-6" />
-    </Button><Button
-      variant="secondary"
-      href={'#'}
-    >
-      <span class="mr-2">{'Submission'}</span>
-      <Icon name="tabler:chevron-right" class="w-6 h-6" />
-    </Button>
-  </div>
-
-  <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"></div>
+<div class="pb-8 bg-blue-50 mt-8">
+  <div class="max-w-7xl mx-auto pt-8" id={id}>
+    <Headline title={title} subtitle={subtitle} tagline={tagline} />
+    <div class="flex gap-8 justify-center">
+      <Button variant="secondary" href={'https://github.com/ChenYi99/EgoPlan/tree/challenge'}>
+        <span class="mr-2">{'Github'}</span>
+        <Icon name="tabler:chevron-right" class="w-6 h-6" />
+      </Button><Button variant="secondary">
+        <span class="mr-2">{'Submission'}</span>
+        <Icon name="tabler:ban" class="w-6 h-6" />
+      </Button>
+    </div>
+    <!-- 
   <h2 class="text-center text-2xl md:text-3xl py-8">Leaderboard</h2>
 
   <div class="px-4 sm:px-6 lg:px-8">
@@ -71,49 +65,56 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       </div>
     </div>
   </div>
-  <div id="track1-pagination" class="my-4 flex justify-center items-center"></div>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
-  <p class="text-gray-700">
-    Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. nuPlan
-    introduces long-term planning of the ego vehicle and corresponding metrics. Provided as docker containers,
-    submissions are deployed for simulation and evaluation.
-  </p>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
-  <p class="text-gray-700">
-    The primary metric is the mean score over three increasingly complex modes: open-loop, closed-loop non-reactive
-    agents, and closed-loop reactive agents. Participants can follow the steps to begin the competition. To submit your
-    results on EvalAI, please follow the submission instructions.
-  </p>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
-  <div class="flex justify-center">
-    <table class="bg-white">
-      <tbody>
-        <tr>
-          <td class="w-64 border px-4 py-2">Outstanding Champion</td>
-          <td class="w-64 border px-4 py-2">USD $10,000</td>
-        </tr>
-        <tr class="bg-gray-50">
-          <td class="border px-4 py-2">Honorable Runner-up (2nd)</td>
-          <td class="border px-4 py-2">USD $8,000</td>
-        </tr>
-        <tr>
-          <td class="border px-4 py-2">Honorable Runner-up (3rd)</td>
-          <td class="border px-4 py-2">USD $5,000</td>
-        </tr>
-        <tr class="bg-gray-50">
-          <td class="border px-4 py-2">Innovation Award</td>
-          <td class="border px-4 py-2">USD $5,000</td>
-        </tr>
-      </tbody>
-    </table>
+  <div id="track1-pagination" class="my-4 flex justify-center items-center"></div> -->
+    <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
+    <p class="text-gray-700">
+      The EgoPlan Challenge aims to evaluate the planning capabilities of Multimodal Large Language Models (MLLMs) in
+      real-world scenarios with diverse environmental inputs. Participants must utilize MLLMs to predict the next
+      feasible action based on real-time task progress videos, current visual observations, and open-form language
+      instructions.
+    </p>
+    <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
+    <p class="text-gray-700">
+      The questions are formatted as multiple-choice problems. Models need to select the most reasonable answer from
+      four candidate choices. The primary metric is accuracy. The details are available in the <a
+        href="https://github.com/ChenYi99/EgoPlan/tree/challenge"
+        class="hover:underline text-sky-600 font-medium">EgoPlan</a
+      >
+    </p>
+    <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
+    <div class="flex justify-center">
+      <table class="bg-white">
+        <tbody>
+          <tr>
+            <td class="w-64 border px-4 py-2">Outstanding Champion</td>
+            <td class="w-64 border px-4 py-2">USD $800</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="border px-4 py-2">Honorable Runner-up</td>
+            <td class="border px-4 py-2">USD $600</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="border px-4 py-2">Innovation Award</td>
+            <td class="border px-4 py-2">USD $600</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
+    <li>
+      <a href="https://github.com/ChenYi99/EgoPlan/issues" class="hover:underline text-sky-600 font-medium"
+        >GitHub issue</a>
+    </li>
+
+    <li>yichennlp@gmail.com</li>
+    <li>Slack channel: #egoplan-challenge-2024</li>
+    <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
+    <li>
+      <a href="https://arxiv.org/abs/2312.06722" class="hover:underline text-sky-600 font-medium"
+        >EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models</a
+      >
+    </li>
   </div>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
-  <li>GitHub issue</li>
-  <li>nuScenes@motional.com</li>
-  <li>Slack channel: #nuplan-challenge-2023</li>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
-  <li>Driving in Real Life with Inverse Reinforcement Learning</li>
-  <li>Importance Is in Your Attention: Agent Importance Prediction for Autonomous Driving</li>
 </div>
 
 <script>

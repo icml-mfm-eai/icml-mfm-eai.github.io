@@ -6,19 +6,19 @@ import { Icon } from 'astro-icon/components';
 const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 ---
 
-<div class="bg-blue-50">
-  <div class="max-w-7xl mx-auto pt-24" id={id}>
+<div class="">
+  <div class="max-w-7xl mx-auto pt-8" id={id}>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <div class="flex gap-8 justify-center">
       <Button variant="secondary" class="" href={'#'}>
         <span class="mr-2">{'Github'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
-      </Button><Button variant="secondary" class="" href={'#'}>
+      </Button><Button variant="secondary">
         <span class="mr-2">{'Submission'}</span>
-        <Icon name="tabler:chevron-right" class="w-6 h-6" />
+        <Icon name="tabler:ban" class="w-6 h-6" />
       </Button>
     </div>
-    <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"></div>
+    <!--     
     <h2 class="text-center text-2xl md:text-3xl py-8">Leaderboard</h2>
 
     <div class="px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
         </div>
       </div>
     </div>
-    <div id="track2-pagination" class="my-4 flex justify-center items-center"></div>
+    <div id="track2-pagination" class="my-4 flex justify-center items-center"></div> -->
     <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
     <p class="text-gray-700">
       Unlike previous manipulation tasks, provided RH20T-P dataset are clipped by primitive skills, facilitating the
@@ -76,9 +76,9 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
     <p class="text-gray-700">
       The primary metric of this track is success rate of manipulation. We provide detailed information for the dataset,
-      evaluation, and submission instructions [here].The test server is hosted on [xxx].
+      evaluation, and submission instructions.
     </p>
-    <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
+    <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
     <div class="flex justify-center">
       <table class="bg-white">
         <tbody>
@@ -104,12 +104,26 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
     <li>GitHub issue</li>
     <li>nuScenes@motional.com</li>
-    <li>Slack channel: #nuplan-challenge-2023</li>
+    <li>Slack channel: #nuplan-challenge-2023</li> -->
     <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
-    <li>RH20T-P: A Primitive-Level Robotic Dataset Towards Composable Generalization Agents</li>
-    <li>Look Before You Leap: Unveiling the Power of GPT-4V in Robotic Vision-Language Planning</li>
-    <li>Do As I Can, Not As I Say:Grounding Language in Robotic Affordances</li>
-    <li class="pb-8">RT-H: Action Hierarchies Using Language</li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2403.19622" class="hover:underline text-sky-600 font-medium"
+        >RH20T-P: A Primitive-Level Robotic Dataset Towards Composable Generalization Agents</a
+      >
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/2311.17842" class="hover:underline text-sky-600 font-medium"
+        >Look Before You Leap: Unveiling the Power of GPT-4V in Robotic Vision-Language Planning</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/2204.01691" class="hover:underline text-sky-600 font-medium"
+        >Do As I Can, Not As I Say:Grounding Language in Robotic Affordances</a>
+    </li>
+    <li class="pb-8">
+      <a href="https://arxiv.org/abs/2403.01823" class="hover:underline text-sky-600 font-medium"
+        >RT-H: Action Hierarchies Using Language</a>
+    </li>
   </div>
 </div>
 
