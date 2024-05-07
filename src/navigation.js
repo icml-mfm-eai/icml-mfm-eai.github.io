@@ -7,15 +7,15 @@ export const headerData = {
       href: getPermalink('/#Overview'),
     },
     {
-      text: 'Call For Papers',
+      text: 'Call for Papers',
       href: getPermalink('/#Call-For-Papers'),
     },
+    // {
+    //   text: 'Challenges',
+    //   href: getPermalink('/#Challenges'),
+    // },
     {
-      text: 'Challenges',
-      href: getPermalink('/#Challenges'),
-    },
-    {
-      text: 'Organizers',
+      text: 'Organizing Committee',
       href: getPermalink('/#Organizers'),
     },
     {
