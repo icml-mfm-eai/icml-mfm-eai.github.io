@@ -1,5 +1,5 @@
 site:
-  name: ICML MFM EAI WorkShop
+  name: ICML MFM-EAI Workshop
   site: 'https://icml-mfm-eai.github.io'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: ICML MFM EAI WorkShop
-    template: '%s — ICML MFM EAI WorkShop'
-  description: "ICML MFM EAI WorkShop"
+    default: ICML MFM-EAI Workshop
+    template: '%s — ICML MFM-EAI Workshop'
+  description: "ICML MFM-EAI Workshop"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: ICML MFM EAI WorkShop
+    site_name: ICML MFM-EAI Workshop
     images:
       - url: '~/assets/images/default.png'
         width: 1200
