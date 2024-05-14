@@ -156,6 +156,7 @@ export interface Testimonial {
   testimonial?: string;
   name?: string;
   job?: string;
+  job2?:string;
   image?: string | unknown;
   link?: string;
 }
