@@ -23,7 +23,17 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2 tagline="ICML 2024 Workshop" actions={[{ variant: 'primary', text: 'Get Started', href: '#Overview' }]}>
+  <Hero2
+    tagline="ICML 2024 Workshop"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: 'https://openreview.net/group?id=ICML.cc/2024/Workshop/MFM-EAI',
+        target: '_blank',
+      },
+    ]}
+  >
     <Fragment slot="title"> Multi-modal Foundation Model meets Embodied AI </Fragment>
 
     <Fragment slot="subtitle">
