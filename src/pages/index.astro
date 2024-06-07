@@ -6,7 +6,7 @@ import Content from '~/components/widgets/Content.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
-// import Timezone from '~/components/widgets/Timezone.astro';
+import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import Button from '~/components/ui/Button.astro';
@@ -44,7 +44,7 @@ const metadata = {
   </Hero2>
 
   <!-- Content Widget **************** -->
-  <Content id="FinalSchedule">
+  <!-- <Content id="FinalSchedule">
     <Fragment slot="title">Final Schedule</Fragment>
     <Fragment slot="content">
       <div class="flex justify-center">
@@ -149,7 +149,173 @@ const metadata = {
         </table>
       </div>
     </Fragment>
+  </Content> -->
+   <Content id="Schedule">
+    <Fragment slot="content">
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
+        Schedule<br />
+      </h3>
+      <Timezone
+        items={[
+          {
+            time: '2024-07-26T08:40:00+02:00',
+            theme: {
+              title: 'Opening Remarks (20 min)',
+              // subtitles: ['LoremLoremLoremLorem', 'LoremLoremLoremLorem'],
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '#',
+          },
+          {
+            time: '2024-07-26T09:00:00+02:00',
+            theme: {
+              title: 'Invited Talk #1: Robotic Foundation Models (30 min)',
+            },
+            Speaker: 'Prof. Sergey Levine @ UC Berkeley',
+            institution: '',
+            logoSrc: 'schedule1.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T09:30:00+02:00',
+            theme: {
+              title: 'Invited Talk #2: Foundation models for robotics (30 min)',
+            },
+            Speaker: ' Prof. Chelsea Finn @ Stanford University',
+            institution: '',
+            logoSrc: 'schedule2.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T10:00:00+02:00',
+            theme: {
+              title: 'Invited Talk #3: (30 min)',
+            },
+            Speaker: 'Prof. Lerrel Pinto @ New York University',
+            institution: '',
+            logoSrc: 'schedule3.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T10:30:00+02:00',
+            theme: {
+              title: 'Coffee Break (15 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T10:45:00+02:00',
+            theme: {
+              title: 'Invited Talk #4: (30 min)',
+            },
+            Speaker: 'Dr. Ishan Misra @ Meta',
+            institution: '',
+            logoSrc: 'schedule4.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T11:15:00+02:00',
+            theme: {
+              title: 'Poster session & Lunch (120 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T13:15:00+02:00',
+            theme: {
+              title: 'Invited Talk #5: (30 min)',
+            },
+            Speaker: 'Prof. Hao Su @ UC San Diego',
+            institution: '',
+            logoSrc: 'schedule5.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T13:45:00+02:00',
+            theme: {
+              title: 'Invited Talk #6: (30 min)',
+            },
+            Speaker: 'Dr. Alexander Toshev @ Apple',
+            institution: '',
+            logoSrc: 'schedule6.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T14:15:00+02:00',
+            theme: {
+              title: 'Invited Talk #7: (30 min)',
+            },
+            Speaker: 'Dr. Chris Paxton @ Hello Robot',
+            institution: '',
+            logoSrc: 'schedule7.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T14:45:00+02:00',
+            theme: {
+              title: 'Coffee Break (15 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T15:00:00+02:00',
+            theme: {
+              title: 'Invited Talk #8: (30 min)',
+            },
+            Speaker: 'Dr. Jack Parker-Holder @ Google DeepMind',
+            institution: '',
+            logoSrc: 'schedule8.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T15:30:00+02:00',
+            theme: {
+              title: 'Best Paper Talk #1 (30 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-05-15T16:00:00',
+            theme: {
+              title: 'Panel (60 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-05-15T17:00:00',
+            theme: {
+              title: 'Closing remarks (10 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+        ]}
+      />
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </Content>
+
   <Content id="Overview">
     <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
       >Welcome to the ICML 2024 Workshop on Multi-modal Foundation Model meets Embodied AI(MFM-EAI)
@@ -336,181 +502,6 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content id="Schedule">
-    <Fragment slot="content">
-      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
-        Schedule<br />
-      </h3>
-      <Timezone
-        items={[
-          {
-            time: '2024-05-15T08:40:00',
-            theme: {
-              title: 'Opening Remarks (20 min)',
-              subtitles: ['LoremLoremLoremLorem', 'LoremLoremLoremLorem'],
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '#',
-          },
-          {
-            time: '2024-05-15T09:00:00',
-            theme: {
-              title: 'Invited talk 1(30 min)',
-            },
-            Speaker: 'Prof. Kristen Grauman',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T09:30:00',
-            theme: {
-              title: 'Invited talk 2(30 min)',
-            },
-            Speaker: ' Prof. Hao Su',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T10:00:00',
-            theme: {
-              title: 'Contributed Opinion Talk 1 (30 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T10:30:00',
-            theme: {
-              title: 'Coffee Break (15 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T10:45:00',
-            theme: {
-              title: 'Best Paper Talk #1 (15 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T11:00:00',
-            theme: {
-              title: 'Best Paper Talk #2 (15 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T11:15:00',
-            theme: {
-              title: 'Poster session & Lunch (120 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T13:15:00',
-            theme: {
-              title: 'Invited Talk #3(30 min)',
-            },
-            Speaker: 'Lerrel Pinto',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T13:45:00',
-            theme: {
-              title: 'Invited Talk #4(30 min)',
-            },
-            Speaker: 'Prof. Chuang Gan',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T14:15:00',
-            theme: {
-              title: 'Contributed Opinion Talk #2(30 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T14:45:00',
-            theme: {
-              title: 'Invited Talk #5(30 min)',
-            },
-            Speaker: 'Prof. Ziwei Liu',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T15:15:00',
-            theme: {
-              title: 'Coffee Break(15 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T15:30:00',
-            theme: {
-              title: 'Invited Talk #6(15 min)',
-            },
-            Speaker: 'Dr. Chris Paxton',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T16:00:00',
-            theme: {
-              title: 'Panel (60 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-          {
-            time: '2024-05-15T17:00:00',
-            theme: {
-              title: 'Closing remarks (10 min)',
-            },
-            Speaker: '',
-            institution: '',
-            logoSrc: '/avatar.png',
-            link: '',
-          },
-        ]}
-      />
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
 
   <!-- Brands Widget ****************** -->
   <!-- 
