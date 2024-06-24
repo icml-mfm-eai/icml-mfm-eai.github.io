@@ -10,18 +10,22 @@ export const headerData = {
       text: 'Call for Papers',
       href: getPermalink('/#Call-For-Papers'),
     },
+    {
+      text:'Speakers',
+      href:getPermalink('/#Speakers')
+    },
     // {
     //   text: 'Challenges',
     //   href: getPermalink('/#Challenges'),
     // },
     {
-      text: 'Organizing Committee',
+      text: 'People',
       href: getPermalink('/#Organizers'),
     },
-    {
-      text: 'Steering Committee',
-      href: getPermalink('/#Steering-Committee'),
-    },
+    // {
+    //   text: 'Steering Committee',
+    //   href: getPermalink('/#Steering-Committee'),
+    // },
   ],
 };
 
