@@ -22,6 +22,10 @@ export const headerData = {
       text: 'People',
       href: getPermalink('/#Organizers'),
     },
+    {
+      text:'Challenge',
+      href:'https://chenyi99.github.io/ego_plan_challenge/'
+    }
     // {
     //   text: 'Steering Committee',
     //   href: getPermalink('/#Steering-Committee'),
